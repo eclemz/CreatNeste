@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.footer li {
+display: flex;
+padding: 8px;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+}
