@@ -23,9 +23,9 @@ const SocialIcons = () => {
               borderRadius: '50%',
               transition: { duration: 0.1 },
             }}
-            className='flex w-6 h-6 p-1 justify-center items-center rounded-full border-[0.6px] border-white text-white'
+            className='flex w-6 h-6 p-[0.33331rem] justify-center items-center rounded-full border-[0.6px] border-[#F0F0F0] text-white'
           >
-            <item.icon className="text-inherit h-3 w-3"/>
+            <item.icon className="text-inherit h-[0.83331rem] w-[0.83331rem] shrink-0"/>
           </motion.li>
         ))}
       </ul>

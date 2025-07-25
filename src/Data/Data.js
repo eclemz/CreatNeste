@@ -5,8 +5,13 @@ import {
   FaRegHandshake,
 } from "react-icons/fa6";
 import { FaGem } from "react-icons/fa";
-import { GiBullseye } from "react-icons/gi";
+import { GiBullseye, GiStoneCrafting } from "react-icons/gi";
 import { IoTelescopeOutline } from "react-icons/io5";
+import { PiBinocularsFill } from "react-icons/pi";
+import { GiAutoRepair } from "react-icons/gi";
+import { SiProbot } from "react-icons/si";
+import { MdOutlineSecurity } from "react-icons/md";
+import { BiShuffle } from "react-icons/bi";
 
 export const serviceCard = [
   {
@@ -36,25 +41,30 @@ export const serviceCard = [
 ];
 
 export const benefits = [
-  {
+  { icon: PiBinocularsFill,
     title: "Increased Visibility",
     desc: `We will help you enhance your online presence through expertly designed digital products driving more traffic and potential customers to your business.`,
   },
   {
+    icon: GiStoneCrafting,
     title: "Expertise and Specialization",
     desc: `We have specialized teams with expertise in various technologies which ensures high-quality outcomes tailored to business needs.`,
   },
-  {
+  { icon: MdOutlineSecurity,
     title: "Enhance Security",
     desc: `We have dedicated security experts who ensure that digital products are developed with robust security measures, protecting businesses from cyber threats.`,
   },
-  {
+  { icon: SiProbot,
     title: "Access to Latest Technology",
     desc: `We stay updated with the latest trends and technologies in the digital space, providing our clients with innovative solutions and competitive advantages.`,
   },
-  {
+  { icon: GiAutoRepair,
     title: "Long-Term Support and Maintenance",
     desc: `We typically offer ongoing support and maintenance services, ensuring that digital solutions remain up-to-date, functional, and secure over time.`,
+  },
+  { icon: BiShuffle,
+    title: "Scalability and Flexibility",
+    desc: `We can scale resources up or down based on project requirements, offering flexibility to adapt to business changes without long-term commitments`,
   },
 ];
 
@@ -65,17 +75,22 @@ export const faq = [
   },
 
   {
-    question: "What is SEO",
+    question: "What Industries do you serve?",
     answer: `SEO, or Search Engine Optimization, enhances website visibility on search engines like Google. It optimizes content, keywords, and structure to attract organic traffic. SEO is crucial for higher search rankings, making sites easier to find. Well-optimized sites load faster and provide relevant information, leading to higher conversion rates and online success.`,
   },
 
   {
-    question: "What is SEO",
+    question: "What services do you offer at creatneste?",
     answer: `SEO, or Search Engine Optimization, enhances website visibility on search engines like Google. It optimizes content, keywords, and structure to attract organic traffic. SEO is crucial for higher search rankings, making sites easier to find. Well-optimized sites load faster and provide relevant information, leading to higher conversion rates and online success.`,
   },
 
   {
-    question: "What is SEO",
+    question: "Do you work with startups or Enterprise clients",
+    answer: `SEO, or Search Engine Optimization, enhances website visibility on search engines like Google. It optimizes content, keywords, and structure to attract organic traffic. SEO is crucial for higher search rankings, making sites easier to find. Well-optimized sites load faster and provide relevant information, leading to higher conversion rates and online success.`,
+  },
+
+  {
+    question: "Do you offer post-launch support maintenance?",
     answer: `SEO, or Search Engine Optimization, enhances website visibility on search engines like Google. It optimizes content, keywords, and structure to attract organic traffic. SEO is crucial for higher search rankings, making sites easier to find. Well-optimized sites load faster and provide relevant information, leading to higher conversion rates and online success.`,
   },
 ];
@@ -113,7 +128,7 @@ export const testimonial = [
 export const projectCard = [
   {
     image: "/project.png",
-    title: "Edtech",
+    title: "Portfolio",
     name: "Ola",
   },
   {
@@ -123,12 +138,12 @@ export const projectCard = [
   },
   {
     image: "/project.png",
-    title: "Edtech",
+    title: "Fintech",
     name: "Ola",
   },
   {
     image: "/project.png",
-    title: "Edtech",
+    title: "Medtech",
     name: "Ola",
   },
 ];
@@ -170,26 +185,38 @@ export const missionCard = [
 
 export const teamCard = [
     {
-        image:"/team1.png",
-        name:"Amarachukwu Ude",
-        title:"Co-founder, CreatNeste"
+        image:"/dera.png",
+        name:"Onuma Chidera",
+        title:"Product Manager"
     },
 
     {
-        image:"/team2.png",
-        name:"Abdullahim Saqiq",
-        title:"Co-founder, CreatNeste"
+        image:"/nonor.png",
+        name:"Chinonyelum Eneh",
+        title:"UI/UX Designer"
     },
 
     {
-        image:"/team3.png",
-        name:"Adaobi Kenechukwu",
-        title:"Co-founder, CreatNeste"
+        image:"/nima.png",
+        name:"Adeniran Nimota",
+        title:"Front-End Developer"
     },
 
     {
-        image:"/team4.png",
-        name:"Richard Afong",
-        title:"Co-founder, CreatNeste"
+        image:"/sommy.png",
+        name:"Somtochukwu Chime",
+        title:"UI/UX Designer Intern"
+    },
+
+    {
+        image:"/muna.png",
+        name:"Munachi Okwudiri",
+        title:"Graphic Designer"
+    },
+
+    {
+        image:"/uju.png",
+        name:"Ujunwa Chiahoke",
+        title:"UX Designer Intern"
     }
 ]

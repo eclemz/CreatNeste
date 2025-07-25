@@ -1,12 +1,10 @@
 import React,{ useState, useRef, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { IoMdClose } from "react-icons/io";
 
 function Hamburger({ children, buttonLabel = "Menu" }) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef();
 
-  // Close on outside click
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -17,7 +15,6 @@ function Hamburger({ children, buttonLabel = "Menu" }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [open]);
 
-  // Close on Escape
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === "Escape") setOpen(false);
@@ -25,6 +22,18 @@ function Hamburger({ children, buttonLabel = "Menu" }) {
     if (open) document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [open]);
+
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => (document.body.style.overflow = "auto");
+  }, [open]);
+
+
    // Clone children to add onClick that closes menu
   const enhancedChildren = React.Children.map(children, child => {
     if (typeof child === "object" && child !== null && "type" in child) {
@@ -40,7 +49,8 @@ function Hamburger({ children, buttonLabel = "Menu" }) {
     return child;
   });
   return (
-    <div ref={menuRef}>
+    <div ref={menuRef}
+         className="flex flex-col items-start gap-4 pt-2 pb-4 px-4">
       <button
         aria-controls="menu-list"
         aria-expanded={open}
@@ -55,29 +65,16 @@ function Hamburger({ children, buttonLabel = "Menu" }) {
         </span>
       </button>
       {open && (
+        <div className="fixed inset-0 bg-black/70 z-50"
+              onClick={()=> setOpen=(false)}>
         <nav 
-        id="menu-list" r
-        ole="menu"
-        className="absolute flex flex-col gap-4 w-[100vw] h-[100vh] top-0 right-0 bg-white text-black px-4 py-28 z-50 ">
-            <button
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-            type="button"
-            style={{
-              position: "absolute",
-              top: 16,
-              right: 16,
-              background: "none",
-              border: "none",
-              cursor: "pointer"
-            }}
-          >
-            <span aria-hidden="true" className="inline-block text-2xl text-white">
-              <IoMdClose />
-            </span>
-          </button>
+        id="menu-list"
+        role="menu"
+        onClick={(e) => e.stopPropagation()}
+        className="absolute flex flex-col gap-6 text-sm items-center justify-center self-stretch bg-[#FFF] w-[100vw] h-auto top-0 right-0 text-[#242424] p-8 z-50 ">
           {enhancedChildren}
         </nav>
+        </div>
       )}
     </div>
   );
