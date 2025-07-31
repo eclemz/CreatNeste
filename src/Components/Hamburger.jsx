@@ -66,7 +66,7 @@ function Hamburger({ children, buttonLabel = "Menu" }) {
       </button>
       {open && (
         <div className="fixed inset-0 bg-black/70 z-50"
-              onClick={()=> setOpen=(false)}>
+              onClick={()=> setOpen(false)}>
         <nav 
         id="menu-list"
         role="menu"

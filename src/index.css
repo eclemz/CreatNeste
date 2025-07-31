@@ -2,38 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .footer li {
-display: flex;
-padding: 8px;
-align-items: center;
-gap: 8px;
-align-self: stretch;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
 }
 
-.nav-item{
-display: flex;
-padding: 8px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-color: #123787;
-font-family: Inter;
-font-size: 15px;
-font-style: normal;
-font-weight: 600;
-line-height: 120%; 
+.nav-item {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #123787;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
 }
 
 .menu-item {
-display: flex;
-padding: 8px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-align-self: stretch;
-color: #242424;
-font-family: Inter;
-font-size: 14px;
-width: 22.5rem;
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  color: #242424;
+  font-family: Inter;
+  font-size: 14px;
+  width: 22.5rem;
+  font-family: Inter;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-item {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #242424;
+    font-family: Inter;
+    font-size: 16px;
+    width: 22.5rem;
+    font-family: Inter;
+  }
 }

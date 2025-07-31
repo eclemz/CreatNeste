@@ -6,6 +6,7 @@ import Footer from "./Components/Footer"
 import Services from "./Pages/Services"
 import Portfolio from "./Pages/Portfolio";
 import About from "./Pages/About";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   const location = useLocation();
@@ -18,10 +19,10 @@ function App() {
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
           <Route path="/portfolio" element={<PageWrapper><Portfolio /></PageWrapper>} />
-          {/* <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} /> */}
         </Routes>
       </AnimatePresence>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

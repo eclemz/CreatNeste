@@ -18,32 +18,40 @@ export const serviceCard = [
     image: "/management.png",
     icon: FaRegFolderOpen,
     title: "Product Management",
-    desc: `Unlock your product's potential with Creatnest's Product Management service, where we blend strategic insight and innovative solutions to guide your product from concept to market success.`,
+    desc: `At Creatnest, we unlock your product's potential through expert Product Management services. Our team combines strategic insight with creative problem-solving to guide your product from concept to launch. We work closely with you to align business goals with user needs while using agile methods to adapt and evolve. Whether you're building from scratch or refining an existing idea, our process ensures market success, top rated. Let us help you bring your vision to life with clarity, structure, and measurable impact.
+
+`,
   },
   {
     image: "/software.jpg",
     icon: FaCode,
     title: "Software Developement",
-    desc: `At Creatnest, we specialize in software development tailored to your specific needs. Our team of experts collaborates closely with you to transform your ideas into robust software solutions. `,
+    desc: `We specialize in software development tailored to your unique goals. Our expert team collaborates closely with you to turn your ideas into powerful, user-friendly applications. We leverage modern technologies and agile methodologies to ensure efficiency, flexibility, and scalability. From custom platforms to integrated systems, we develop solutions that meet your needs and exceed expectations. Let’s work together to deliver a seamless digital product that drives growth, performance, and a strong presence in your industry.`,
   },
+
   {
     image: "/design.jpg",
     icon: FaFigma,
     title: "UI/UX Design",
-    desc: `Crafting engaging and intuitive experiences is at the heart of what we do. By leveraging innovative strategies and cutting-edge technology, we can work together to elevate your business to new heights. `,
+    desc: `We design intuitive and impactful experiences that drive connection and action. By combining human-centered design with the latest digital tools, we craft interfaces that are both engaging and easy to use. Every step of our process is rooted in strategy, collaboration, and creative thinking. Whether you’re building a product, platform, or brand experience, we help you create meaningful moments that leave a lasting impression and elevate your presence in the digital world. We let the result speak for itself.`,
   },
+
   {
     image: "/mentorship.jpg",
     icon: FaRegHandshake,
     title: "Mentorship",
-    desc: `Our mentorship programs are designed to empower individuals by connecting them with experienced professionals in their field. We believe that guidance and support can significantly enhance professional growth.`,
+    desc: `our mentorship programs are built to inspire, guide, and empower individuals at any stage of their journey. We connect you with experienced mentors who offer real-world insights and structured support. Through one-on-one sessions and collaborative planning, we help you grow personally and professionally. Whether you're launching a career or advancing one, we provide the tools, direction, and encouragement you need to thrive in today’s fast-paced and ever-evolving professional landscape.`,
   },
 ];
 
 export const benefits = [
   { icon: PiBinocularsFill,
     title: "Increased Visibility",
-    desc: `We will help you enhance your online presence through expertly designed digital products driving more traffic and potential customers to your business.`,
+    desc: `We will help you enhance your 
+    online presence through expertly 
+    designed digital products driving 
+    more traffic and potential 
+    customers to your business.`,
   },
   {
     icon: GiStoneCrafting,
@@ -152,7 +160,7 @@ export const missionCard = [
   {
     icon: GiBullseye,
     title: "Mission",
-    desc: `Our mission is to harness the power of design to create meaningful, and impactful solutions.`,
+    desc: `Our mission is to harness the power of design to create meaningful, and impactful solutions considering accessibility compliance.`,
     style: {
       backgroundImage: `url('/mission.png')`,
       backgroundSize: "cover",

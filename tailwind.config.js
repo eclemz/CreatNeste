@@ -9,8 +9,11 @@ export default {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
       },
+      screens: {
+        lt: { max: '1279px', min: '768px' }
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 }
 

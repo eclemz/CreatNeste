@@ -16,7 +16,7 @@ function Home() {
       <AboutPreview />
       <ServiceCard showSection={true} />
       <Benefits showAll={false} showSection={false}/>
-      <section className="flex flex-col justify-center items-center px-4 gap-4">
+      <section className="flex flex-col justify-center items-center lg:py-16 lg:px-14 md:px-10 px-4 gap-4 lg:gap-8">
       <div className="flex flex-col justify-center items-center py-5 gap-3 self-stretch">
         <div className="flex justify-center items-center md:gap-2 md:py-2 md:px-4">
         <span className="font-inter text-xs md:text-sm md:font-bold font-semibold text-[#1D5ADD]">

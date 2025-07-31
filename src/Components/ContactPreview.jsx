@@ -1,5 +1,6 @@
-import { PiEnvelopeSimpleThin } from "react-icons/pi";
-import { FcCellPhone } from "react-icons/fc";
+import { BsEnvelope } from "react-icons/bs";
+import { RiMailSendLine } from "react-icons/ri";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { Buttons, Buttons1 } from "./Buttons";
 
 function ContactPreview() {
@@ -15,15 +16,16 @@ function ContactPreview() {
         </section>
         <section className='flex flex-col md:flex-row justify-center items-center self-stretch gap-2'>
             <Buttons className='flex py-2 md:py-3 px-4 justify-center items-center self-stretch rounded-md gap-2 bg-[#1D5ADD] text-white'>
-                <PiEnvelopeSimpleThin />
+                {/* <BsEnvelope /> */}
+                <RiMailSendLine />
                 <span className="font-inter text-sm">
                     Send an Email
                 </span>
             </Buttons>
             <Buttons1 className='flex py-2 md:py-3 px-4 justify-center items-center self-stretch rounded-md gap-2 text-[#1D5ADD] border border-[#1D5ADD]'>
-                <FcCellPhone />
+                <TfiHeadphoneAlt className="h-5 w-4"/>
                 <span className="font-inter text-sm">
-                    Contact us
+                    Give us a call
                 </span>
             </Buttons1>
         </section>
