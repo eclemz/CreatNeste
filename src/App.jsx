@@ -7,6 +7,7 @@ import Services from "./Pages/Services"
 import Portfolio from "./Pages/Portfolio";
 import About from "./Pages/About";
 import ScrollToTop from "./Components/ScrollToTop";
+import FaqPage from "./Pages/FaqPage";
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
           <Route path="/portfolio" element={<PageWrapper><Portfolio /></PageWrapper>} />
+          <Route path="/faqpage" element={<PageWrapper><FaqPage/></PageWrapper>} />
         </Routes>
       </AnimatePresence>
       <Footer />

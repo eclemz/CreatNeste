@@ -2,8 +2,6 @@ import { Buttons } from "./Buttons";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-
-
 function Hero() {
   const formRef = useRef();
   const [message, setMessage] = useState("");
@@ -63,9 +61,9 @@ function Hero() {
           <span className="font-inter text-xs lg:text-sm font-semibold md:font-bold text-[#1D5ADD]">
             ALL-IN-ONE DIGITAL SOLUTIONS FOR ALL
           </span>
-          <h2 className="text-black text-[1.75rem] md:text-4xl lg:text-5xl font-inter leading-[130%] font-semibold">
+          <h2 className="text-black text-2xl md:text-4xl lg:text-5xl font-inter leading-tight md:leading-[3rem] lg:leading-[3.5rem] font-semibold">
             Building{" "}
-            <span className="bg-[#F9E79F] text-[#1D5ADD] p-1 leading-[130%] whitespace-nowrap md:font-bold border border-[#988D61]">
+            <span className="bg-[#F9E79F] text-[#1D5ADD] p-1 lg:p-2 leading-[130%] whitespace-nowrap md:font-bold border border-[#988D61]">
               High-Converting
             </span>{" "}
             <br /> Digital Products for <br /> Businesses
@@ -80,7 +78,7 @@ function Hero() {
           action=""
           ref={formRef}
           onSubmit={sendEmail}
-          className="flex w-[21.625rem] lg:flex-1 flex-col lg:flex-row lg:justify-between justify-center items-start lg:self-start self-stretch mx-auto md:mx-0 p-1 lg:py-1 lg:pl-0 lg:pr-1 md:py-1 md:px-2  border border-[#ABABAB] bg-white rounded-md"
+          className="flex md:w-[21.625rem] lg:flex-1 flex-col lg:flex-row lg:justify-between justify-center items-start lg:self-start self-stretch w-full md:mx-0 p-1 lg:py-1 lg:pl-0 lg:pr-1 md:py-1 md:px-2  border border-[#ABABAB] bg-white rounded-md"
         >
           <label htmlFor="Message" className="sr-only text-[#565656]">
             Send Message
@@ -92,13 +90,10 @@ function Hero() {
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Send us a message"
             required
-            className="resize-none py-2 pl-3 pr-2 text-sm md:text-base font-inter justify-center lg:self-center items-center placeholder:text-[#565656] h-8 outline-none md:h-10 align-middle self-stretch"
+            className="resize-none py-2 pl-3 pr-2 text-sm md:text-base font-inter justify-center lg:self-center items-center placeholder:text-[#a7a3a3] focus:placeholder-transparent h-8 outline-none md:h-10 align-middle self-stretch"
           ></textarea>
-          <Buttons
-            type="submit"
-            className=" bg-[#1D5ADD] text-white px-4 py-2 md:py-3 h-8 md:h-10 rounded-[0.25rem] hover:bg-blue-700 transition-colors self-stretch"
-          >
-            <span className="font-inter md:text-base ">Start Project</span>
+          <Buttons className={`md:self-stretch`} type="submit">
+            Start Project
           </Buttons>
         </form>
         {status && <p className="text-sm text-green-600 mt-2 px-4">{status}</p>}

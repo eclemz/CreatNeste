@@ -8,32 +8,31 @@ function Testimonial() {
   let startX = 0;
 
   useEffect(() => {
-  const ref = scrollRef.current;
-  const cards = ref.querySelectorAll("article");
+    const ref = scrollRef.current;
+    const cards = ref.querySelectorAll("article");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      // Get entry with the most visibility (intersectionRatio)
-      const visibleEntry = entries.reduce((prev, current) =>
-        prev.intersectionRatio > current.intersectionRatio ? prev : current
-      );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Get entry with the most visibility (intersectionRatio)
+        const visibleEntry = entries.reduce((prev, current) =>
+          prev.intersectionRatio > current.intersectionRatio ? prev : current
+        );
 
-      const visibleIndex = Array.from(cards).indexOf(visibleEntry.target);
-      setActiveIndex(visibleIndex);
-    },
-    {
-      root: ref,
-      threshold: 0.6, // Trigger when 60% of a card is in view
-    }
-  );
+        const visibleIndex = Array.from(cards).indexOf(visibleEntry.target);
+        setActiveIndex(visibleIndex);
+      },
+      {
+        root: ref,
+        threshold: 0.6, // Trigger when 60% of a card is in view
+      }
+    );
 
-  cards.forEach((card) => observer.observe(card));
+    cards.forEach((card) => observer.observe(card));
 
-  return () => {
-    cards.forEach((card) => observer.unobserve(card));
-  };
-}, []);
-
+    return () => {
+      cards.forEach((card) => observer.unobserve(card));
+    };
+  }, []);
 
   const scrollToIndex = (index) => {
     const cardWidth = scrollRef.current.firstChild.offsetWidth + 16;
@@ -47,16 +46,19 @@ function Testimonial() {
     <main className="flex flex-col justify-center items-start lg:py-16 lg:px-14 md:py-14 md:px-10 py-6 px-4 gap-6">
       {/* Section Heading */}
       <section className="flex flex-col justify-center items-start gap-2 lg:gap-5 lg:items-center lg:self-stretch">
-        <div className="flex flex-col items-start self-stretch gap-1 lg:justify-center">
-          <span className="font-inter text-xs lg:text-sm font-semibold text-[#123787] bg-[#E8EFFC] py-1 px-2 rounded-lg">
-            Testimonial
+        <div className="flex flex-col items-start self-stretch gap-1 md:gap-3 lg:justify-center">
+          <span className="font-inter text-xs lg:text-sm font-semibold text-[#1D5ADD] py-1 px-2 rounded-lg">
+            TESTIMONIAL
           </span>
-          <h4 className="font-inter text-xl md:text-3xl lg:text-[2rem] font-semibold text-[#242424]">
-            See how we made a difference
-          </h4>
-          <p className="text-base md:self-stretch text-[#475467]">
-            Hear from some of our amazing customers who are automating their finances.
-          </p>
+          <div className="flex flex-col items-start self-stretch lg:justify-center">
+            <h4 className="font-inter text-xl md:text-3xl lg:text-[2rem] font-semibold text-[#242424]">
+              See how we made a difference
+            </h4>
+            <p className="text-base md:self-stretch text-[#475467]">
+              Hear from some of our amazing customers who are automating their
+              finances.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -84,7 +86,9 @@ function Testimonial() {
                   <h4 className="text-lg lg:text-base font-semibold text-blue-600">
                     {item.name}
                   </h4>
-                  <p className="text-sm lg:text-base text-gray-500">{item.title}</p>
+                  <p className="text-sm lg:text-base text-gray-500">
+                    {item.title}
+                  </p>
                 </div>
               </div>
             </article>
