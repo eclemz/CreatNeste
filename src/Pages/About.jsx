@@ -34,7 +34,7 @@ function About() {
             <img
               src="/story.png"
               alt=""
-              className="md:h-[21.375rem] lt:h-[21.8rem] h-[24rem] self-center lg:w-[39.75rem] w-[24.8rem] md:w-[full] lt:w-full "
+              className="md:h-[21.375rem] lt:h-[21.8rem] h-[22rem] self-center lg:w-[39.75rem] w-[24.8rem] md:w-[full] lt:w-full "
             />
           </picture>
           <div className="flex flex-col flex-1 items-start gap-2">

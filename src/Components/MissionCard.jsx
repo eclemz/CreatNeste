@@ -3,19 +3,18 @@ import { motion } from "framer-motion";
 
 const cardOverlayVariants = {
   initial: {
-    clipPath: "circle(10% at 100% 0%)",
+    clipPath: "circle(20px at calc(100% - 5px) 5px)", // 20px circle, 20px from top and right
   },
   hover: {
-    clipPath: "circle(150% at 100% 0%)",
+    clipPath: "circle(150% at calc(100% - 20px) 20px)",
     transition: { duration: 0.5, ease: "easeInOut" },
   },
   tap: {
-    clipPath: "circle(150% at 100% 0%)",
+    clipPath: "circle(150% at calc(100% - 20px) 20px)",
     transition: { duration: 0.4, ease: "easeInOut" },
   },
 };
 
-// Create a parent variant to handle the state propagation
 const cardVariants = {
   initial: {},
   hover: {},
@@ -75,8 +74,66 @@ function MissionCard() {
         })}
       </section>
 
-      {/* For Phones & Tablets */}
-      <section className="lg:hidden grid grid-cols-1 lt:grid-cols-2 md:grid-cols-2 gap-4 lt:gap-6 w-full">
+      {/* Tablets first right card */}
+      <section className="lg:hidden hidden md:block lt:block">
+        {missionCard.slice(0, 1).map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <motion.article
+              key={index}
+              variants={cardVariants}
+              initial="initial"
+              whileHover="hover"
+              whileTap="tap"
+              className="relative min-h-[10rem] flex flex-col h-full justify-center items-start self-stretch rounded-lg border border-[#F0F0F0] lt:gap-6 md:gap-3 gap-2 md:py-5 md:px-3 lt:py-6 lt:px-4 py-4 px-2 overflow-hidden"
+              style={item.style}
+            >
+              <div className="relative z-10 flex items-center self-start gap-2">
+                <div className="flex h-7 w-7 md:h-8 md:w-8 p-2 justify-center items-center gap-[0.375rem] rounded-full bg-white text-[#1D5ADD]">
+                  <Icon className="h-4 w-4 md:h-5 md:w-5 shrink-0" />
+                </div>
+                <span className="font-inter text-base md:text-lg font-semibold text-[#565656] group-active:text-white transition-all duration-700  mix-blend-difference">
+                  {item.title}
+                </span>
+              </div>
+              <p className="relative z-10 font-inter text-sm md:text-base text-black whitespace-normal self-stretch">
+                {item.desc}
+              </p>
+            </motion.article>
+          );
+        })}
+      </section>
+      {/* Tablet second cards */}
+      <section className="hidden lg:hidden lt:grid md:grid grid-cols-1 lt:grid-cols-2 col-span-2 md:grid-cols-2 gap-4 lt:gap-6 w-full">
+        {missionCard.slice(1).map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <motion.article
+              key={index}
+              variants={cardVariants}
+              initial="initial"
+              whileHover="hover"
+              whileTap="tap"
+              className="relative min-h-[10rem] flex flex-col h-full w-full justify-center items-start self-stretch rounded-lg border border-[#F0F0F0] lt:gap-6 md:gap-3 gap-2 md:py-5 md:px-3 lt:py-6 lt:px-4 py-4 px-2 overflow-hidden"
+              style={item.style}
+            >
+              <div className="relative z-10 flex items-center self-start gap-2">
+                <div className="flex h-7 w-7 md:h-8 md:w-8 p-2 justify-center items-center gap-[0.375rem] rounded-full bg-white text-[#1D5ADD]">
+                  <Icon className="h-4 w-4 md:h-5 md:w-5 shrink-0" />
+                </div>
+                <span className="font-inter text-base md:text-lg font-semibold text-[#565656] group-active:text-white transition-all duration-700  mix-blend-difference">
+                  {item.title}
+                </span>
+              </div>
+              <p className="relative z-10 font-inter text-sm md:text-base text-black whitespace-normal self-stretch">
+                {item.desc}
+              </p>
+            </motion.article>
+          );
+        })}
+      </section>
+      {/* Mobile all cards */}
+      <section className="md:hidden grid grid-cols-1 lt:grid-cols-2 md:col-span-2 md:grid-cols-2 gap-4 lt:gap-6 w-full">
         {missionCard.map((item, index) => {
           const Icon = item.icon;
           return (
@@ -86,22 +143,18 @@ function MissionCard() {
               initial="initial"
               whileHover="hover"
               whileTap="tap"
-              className="relative flex flex-col h-full justify-center items-start self-stretch rounded-lg border border-[#F0F0F0] lt:gap-6 md:gap-3 gap-4 md:py-5 md:px-3 lt:py-6 lt:px-4 p-4 overflow-hidden"
+              className="relative min-h-[10rem] flex flex-col h-full w-full justify-center items-start self-stretch rounded-lg border border-[#F0F0F0] lt:gap-6 md:gap-3 gap-2 md:py-5 md:px-3 lt:py-6 lt:px-4 py-4 px-2 overflow-hidden"
               style={item.style}
             >
-              <motion.div
-                variants={cardOverlayVariants}
-                className="absolute inset-0 z-0 rounded-lg bg-[#011843] pointer-events-none"
-              />
               <div className="relative z-10 flex items-center self-start gap-2">
                 <div className="flex h-7 w-7 md:h-8 md:w-8 p-2 justify-center items-center gap-[0.375rem] rounded-full bg-white text-[#1D5ADD]">
                   <Icon className="h-4 w-4 md:h-5 md:w-5 shrink-0" />
                 </div>
-                <span className="font-inter text-base md:text-lg font-semibold text-white mix-blend-difference">
+                <span className="font-inter text-base md:text-lg font-semibold text-[#565656] group-active:text-white transition-all duration-700  mix-blend-difference">
                   {item.title}
                 </span>
               </div>
-              <p className="relative z-10 font-inter text-xs md:text-base text-white mix-blend-difference self-stretch">
+              <p className="relative z-10 font-inter text-sm md:text-base text-black whitespace-normal self-stretch">
                 {item.desc}
               </p>
             </motion.article>

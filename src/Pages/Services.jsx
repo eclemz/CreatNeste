@@ -35,7 +35,9 @@ function Services() {
         <Metrics />
         <ServiceCard />
         <Benefits showAll={true} showSection={true} />
-        <Faq />
+        <section className="flex flex-col items-center py-6 px-4 md:py-14 md:px-28 lg:py-16 lg:px-60 lg:gap-8 gap-6">
+          <Faq showSection={true} />
+        </section>
         <Testimonial />
         <ContactPreview />
       </section>

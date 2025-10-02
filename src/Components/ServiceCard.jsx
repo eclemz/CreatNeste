@@ -1,11 +1,13 @@
 import { easeBounce } from "d3-ease";
 import { serviceCard } from "../Data/Data.js";
-import { Buttons1 } from "./Buttons.jsx";
+import { Buttons2, Buttons1 } from "./Buttons.jsx";
 import { motion } from "framer-motion";
 
 const cardVariants = {
   initial: {},
-  hover: {},
+  hover: {
+    transition: { duration: 0.3, ease: "linear" },
+  },
   tap: {},
 };
 
@@ -15,11 +17,11 @@ const cardOverlayVariants = {
   },
   hover: {
     clipPath: "polygon(100% 0%, 90% 0%, 100% 100%)", // Inverted right-angle triangle
-    transition: { duration: 0.4, ease: "easeInOut" },
+    transition: { duration: 0.2, ease: "easeInOut" },
   },
   tap: {
     clipPath: "polygon(100% 0%, 90% 0%, 100% 100%)",
-    transition: { duration: 0.4, ease: "easeInOut" },
+    transition: { duration: 0.2, ease: "easeInOut" },
   },
 };
 
@@ -40,6 +42,9 @@ const ServiceCard = ({ showSection = false }) => {
     window.location.href =
       "mailto:creatneste@gmail.com?subject=Let's%20Work%20Together";
   };
+
+  const cardBaseClass =
+    "flex relative overflow-hidden flex-col group items-start justify-end self-stretch md:p-4 py-4 px-2 gap-4 rounded-lg bg-[#E8EFFC] shadow-md hover:shadow-lg border border-transparent hover:border-[#1D5ADD] min-h-[250px] lg:min-h-[250px] transition-all duration-300 ease-in-out ";
 
   return (
     <main className="flex flex-col justify-center items-center md:self-stretch gap-8 lg:py-16 lg:px-14 md:px-10 md:py-10 py-6 px-4">
@@ -79,7 +84,7 @@ const ServiceCard = ({ showSection = false }) => {
                   whileTap="tap"
                   initial="initial"
                   key={index}
-                  className="flex relative overflow-hidden flex-col group items-start justify-end self-stretch md:p-4 py-4 px-2 gap-4 rounded-lg bg-[#E8EFFC] shadow-md hover:shadow-lg"
+                  className={cardBaseClass}
                 >
                   <motion.div
                     variants={cardOverlayVariants}
@@ -96,12 +101,12 @@ const ServiceCard = ({ showSection = false }) => {
                       {item.desc}
                     </p>
                   </div>
-                  <Buttons1
+                  <Buttons2
                     onClick={handleEmailClick}
                     className="relative z-10 md:py-3 py-2 px-4 text-[#1D5ADD] group-active:underline underline-offset-4 transition-all duration-600"
                   >
                     Contact Us
-                  </Buttons1>
+                  </Buttons2>
                 </motion.article>
               );
             })}
@@ -118,7 +123,7 @@ const ServiceCard = ({ showSection = false }) => {
                   whileTap="tap"
                   initial="initial"
                   key={index}
-                  className="flex relative overflow-hidden flex-col group items-start justify-end self-stretch md:p-4 py-4 px-2 gap-4 rounded-lg bg-[#E8EFFC] hover:shadow-lg hover:border-[1px] hover:border-[#1D5ADD]"
+                  className={cardBaseClass}
                 >
                   <motion.div
                     variants={cardOverlayVariants}
@@ -135,12 +140,12 @@ const ServiceCard = ({ showSection = false }) => {
                       {item.desc}
                     </p>
                   </div>
-                  <Buttons1
+                  <Buttons2
                     onClick={handleEmailClick}
-                    className="relative z-10 group-hover:underline group-active:underline underline-offset-4 transition-all duration-600 md:py-3 py-2 px-4 text-[#1D5ADD]"
+                    className="relative z-10 group-hover:underline group-active:underline underline-offset-4 transition-all duration-600"
                   >
                     Contact Us
-                  </Buttons1>
+                  </Buttons2>
                 </motion.article>
               );
             })}
@@ -157,7 +162,7 @@ const ServiceCard = ({ showSection = false }) => {
                   whileTap="tap"
                   initial="initial"
                   key={index}
-                  className="flex relative overflow-hidden flex-col group items-start justify-end self-stretch md:p-4 py-4 px-2 gap-4 rounded-lg bg-[#E8EFFC] hover:shadow-lg hover:border-[1px] hover:border-[#1D5ADD]"
+                  className={cardBaseClass}
                 >
                   <motion.div
                     variants={cardOverlayVariants}
@@ -174,12 +179,12 @@ const ServiceCard = ({ showSection = false }) => {
                       {item.desc}
                     </p>
                   </div>
-                  <Buttons1
+                  <Buttons2
                     onClick={handleEmailClick}
-                    className="relative z-10 md:py-3 py-2 px-4 group-hover:underline group-focus:underline underline-offset-4 transition-all duration-600 text-[#1D5ADD]"
+                    className="relative z-10 group-hover:underline group-focus:underline underline-offset-4 transition-all duration-600"
                   >
                     Contact Us
-                  </Buttons1>
+                  </Buttons2>
                 </motion.article>
               );
             })}
@@ -215,10 +220,7 @@ const ServiceCard = ({ showSection = false }) => {
                   </h3>
                   <p className="text-gray-700 text-sm">{item.desc}</p>
                 </div>
-                <Buttons1
-                  onClick={handleEmailClick}
-                  className="relative z-10 py-2 px-4 text-[#1D5ADD] border-[0.5px] border-[#1D5ADD] self-stretch"
-                >
+                <Buttons1 onClick={handleEmailClick} className="relative z-10 ">
                   Contact Us
                 </Buttons1>
               </motion.article>
@@ -236,7 +238,7 @@ const ServiceCard = ({ showSection = false }) => {
                   key={index}
                   className={`flex relative overflow-hidden flex-col md:flex-row ${
                     !isEven ? "md:flex-row-reverse" : ""
-                  } lg:items-center md:items-start gap-5 p-5 rounded-lg md:gap-6 lg:py-5 lg:px-0 lg:gap-10 bg-white border border-[#F0F0F0]`}
+                  } lg:items-center md:items-start gap-5 p-5 rounded-lg md:gap-6 lg:py-5 lg:px-0 lg:gap-10 bg-white`}
                 >
                   <div className="relative z-10 flex-1 flex flex-col items-start gap-5 lg:gap-6 lg:self-stretch">
                     <div className="flex flex-col items-start justify-center lg:gap-3 lg:py-3">
@@ -247,11 +249,8 @@ const ServiceCard = ({ showSection = false }) => {
                         {item.desc}
                       </p>
                     </div>
-                    <Buttons1
-                      onClick={handleEmailClick}
-                      className="md:py-3 py-2 px-4 text-[#1D5ADD] border-[0.5px] border-[#1D5ADD]"
-                    >
-                      Contact Us
+                    <Buttons1 onClick={handleEmailClick} className="">
+                      {item.button}
                     </Buttons1>
                   </div>
 

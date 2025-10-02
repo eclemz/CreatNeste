@@ -78,7 +78,7 @@ function Hero() {
           action=""
           ref={formRef}
           onSubmit={sendEmail}
-          className="flex md:w-[21.625rem] lg:flex-1 flex-col lg:flex-row lg:justify-between justify-center items-start lg:self-start self-stretch w-full md:mx-0 p-1 lg:py-1 lg:pl-0 lg:pr-1 md:py-1 md:px-2  border border-[#ABABAB] bg-white rounded-md"
+          className="flex md:w-[21.625rem] lg:flex-1 flex-col lg:flex-row lg:justify-between justify-center items-start lg:self-start self-stretch w-full md:mx-0 p-1 lg:py-1 lg:pl-0 lg:pr-1 md:py-1 md:px-2  border border-[#ABABAB] bg-white rounded-md shadow-[0_1px_2px_0_rgba(48,48,48,0.30),0_1px_3px_1px_rgba(48,48,48,0.15)] box-border"
         >
           <label htmlFor="Message" className="sr-only text-[#565656]">
             Send Message

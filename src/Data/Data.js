@@ -18,6 +18,7 @@ export const serviceCard = [
     image: "/management.png",
     icon: FaRegFolderOpen,
     title: "Product Management",
+    button: "Chat With Our Product Team",
     desc: `From concept to launch, we expertly manage product lifecycles, incorporating market research and user feedback to ensure your software solutions not only meet but exceed expectations, delivering maximum business impact and driving growth.
 `,
   },
@@ -25,6 +26,7 @@ export const serviceCard = [
     image: "/software.jpg",
     icon: FaCode,
     title: "Software Developement",
+    button: "See Our Web Projects",
     desc: `We develop secure, scalable, and user-friendly software tailored to your business operations whether web apps, enterprise systems, or automation tools.`,
   },
 
@@ -32,6 +34,7 @@ export const serviceCard = [
     image: "/design.jpg",
     icon: FaFigma,
     title: "UI/UX Design",
+    button: "See Our Designs",
     desc: `At our company, we specialize in designing digital products that look great, solve real problems and engage users effectively essential for driving results and ensuring customer satisfaction. `,
   },
 
@@ -39,6 +42,7 @@ export const serviceCard = [
     image: "/mentorship.jpg",
     icon: FaRegHandshake,
     title: "Branding",
+    button: "Build Your Brand",
     desc: `We help businesses define their identity through creative brand strategies, logos, and messaging that connect with the Nigerian market and beyond.`,
   },
 ];

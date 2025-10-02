@@ -47,7 +47,7 @@ function ProjectCard({ showSection = false }) {
       )}
       <motion.section
         layout
-        className="grid grid-cols-1 md:grid-cols-2 lt:grid-cols-2 lg:grid-cols-3 w-full justify-center self-stretch items-center gap-8 lg:gap-6 md:py-8 lg:py-5 py-2 lg:gap-y-10"
+        className="grid grid-cols-1 md:grid-cols-2 lt:grid-cols-3 lg:grid-cols-3 w-full justify-center self-stretch items-center gap-8 lg:gap-6 md:py-8 lg:py-5 py-2 lg:gap-y-10"
       >
         <AnimatePresence initial={false}>
           {filteredProjects.map((item, index) => (
@@ -59,7 +59,7 @@ function ProjectCard({ showSection = false }) {
               animate="animate"
               exit="exit"
               whileHover="hover"
-              className="flex group lg:w-[430px] w-full md:w-full flex-col justify-center border border-[#EBEBEB] rounded-lg items-center gap-1 pb-4"
+              className="flex group flex-1 xl:w-[26rem]  w-full flex-col justify-center border border-[#EBEBEB] rounded-lg items-center gap-1 pb-2 lg:pb-4 shadow-[0_1px_2px_0_rgba(48,48,48,0.30),0_1px_3px_1px_rgba(48,48,48,0.15)] "
             >
               <picture className="flex self-stretch w-full">
                 <img
@@ -78,7 +78,7 @@ function ProjectCard({ showSection = false }) {
                   </span>
                 </div>
 
-                <Buttons1 className="opacity-0 group-hover:opacity-100 hover:shadow-lg bg-[#F9E79F] transition-all duration-700 self-end rounded-lg h-12 py-1 px-4 font-inter ">
+                <Buttons1 className="hidden lg:flex opacity-0 group-hover:opacity-100 hover:shadow-lg bg-[#F9E79F] transition-all duration-700 self-end rounded-lg h-12 py-1 px-4 font-inter ">
                   <span className="font-inter text-base text-[#242424]">
                     View Project
                   </span>
