@@ -1,41 +1,7 @@
-import { easeBounce } from "d3-ease";
+import React from "react";
 import { serviceCard } from "../Data/Data.js";
 import { Buttons2, Buttons1 } from "./Buttons.jsx";
 import { motion } from "framer-motion";
-
-const cardVariants = {
-  initial: {},
-  hover: {
-    transition: { duration: 0.3, ease: "linear" },
-  },
-  tap: {},
-};
-
-const cardOverlayVariants = {
-  initial: {
-    clipPath: "polygon(100% 0%, 100% 0%, 100% 0%)", // Completely hidden by default
-  },
-  hover: {
-    clipPath: "polygon(100% 0%, 90% 0%, 100% 100%)", // Inverted right-angle triangle
-    transition: { duration: 0.2, ease: "easeInOut" },
-  },
-  tap: {
-    clipPath: "polygon(100% 0%, 90% 0%, 100% 100%)",
-    transition: { duration: 0.2, ease: "easeInOut" },
-  },
-};
-
-// const underlineVariants = {
-//   initial: { width: "0%" },
-//   hover: {
-//     width: "100%",
-//     transition: { duration: 0.6, ease: "easeInOut" },
-//   },
-//   tap: {
-//     width: "100%",
-//     transition: { duration: 0.3, ease: "easeInOut" },
-//   },
-// };
 
 const ServiceCard = ({ showSection = false }) => {
   const handleEmailClick = () => {
@@ -44,7 +10,7 @@ const ServiceCard = ({ showSection = false }) => {
   };
 
   const cardBaseClass =
-    "flex relative overflow-hidden flex-col group items-start justify-end self-stretch md:p-4 py-4 px-2 gap-4 rounded-lg bg-[#E8EFFC] shadow-md hover:shadow-lg border border-transparent hover:border-[#1D5ADD] min-h-[250px] lg:min-h-[250px] transition-all duration-300 ease-in-out ";
+    "flex relative overflow-hidden flex-col group items-start justify-end self-stretch md:p-4 py-4 px-2 gap-4 rounded-lg border-2  min-h-[250px] lg:min-h-[250px] transition-all duration-300 ease-in-out ";
 
   return (
     <main className="flex flex-col justify-center items-center md:self-stretch gap-8 lg:py-16 lg:px-14 md:px-10 md:py-10 py-6 px-4">
@@ -78,19 +44,15 @@ const ServiceCard = ({ showSection = false }) => {
             {serviceCard.map((item, index) => {
               const Icon = item.icon;
               return (
-                <motion.article
-                  variants={cardVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                  initial="initial"
+                <article
                   key={index}
                   className={cardBaseClass}
+                  style={{ background: item.bg, borderColor: item.border }}
                 >
-                  <motion.div
-                    variants={cardOverlayVariants}
-                    className="absolute inset-0 z-0 rounded-lg bg-[#1D5ADD] pointer-events-none"
-                  />
-                  <i className="flex relative z-10 py-4 px-3 rounded-[0.25rem] lg:gap-2 text-3xl text-white bg-[#1D5ADD]">
+                  <i
+                    className="flex z-10 py-4 px-3 rounded-[0.25rem] lg:gap-2 text-3xl text-white"
+                    style={{ background: item.iconBg }}
+                  >
                     <Icon className="h-5 w-7" />
                   </i>
                   <div className="flex relative z-10 flex-col flex-grow p-1 items-start self-stretch gap-2">
@@ -107,7 +69,7 @@ const ServiceCard = ({ showSection = false }) => {
                   >
                     Contact Us
                   </Buttons2>
-                </motion.article>
+                </article>
               );
             })}
           </section>
@@ -117,19 +79,15 @@ const ServiceCard = ({ showSection = false }) => {
             {serviceCard.slice(0, 1).map((item, index) => {
               const Icon = item.icon;
               return (
-                <motion.article
-                  variants={cardVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                  initial="initial"
+                <article
                   key={index}
                   className={cardBaseClass}
+                  style={{ background: item.bg, borderColor: item.border }}
                 >
-                  <motion.div
-                    variants={cardOverlayVariants}
-                    className="absolute inset-0 z-0 rounded-lg bg-[#1D5ADD] pointer-events-none"
-                  />
-                  <i className="flex relative z-10 py-4 px-3 rounded-[0.25rem] text-3xl text-white bg-[#1D5ADD]">
+                  <i
+                    className="flex z-10 py-4 px-3 rounded-[0.25rem] text-3xl text-white"
+                    style={{ background: item.iconBg }}
+                  >
                     <Icon className="h-5 w-7" />
                   </i>
                   <div className="flex relative z-10 flex-col flex-grow p-1 items-start self-stretch gap-2">
@@ -146,7 +104,7 @@ const ServiceCard = ({ showSection = false }) => {
                   >
                     Contact Us
                   </Buttons2>
-                </motion.article>
+                </article>
               );
             })}
           </section>
@@ -156,19 +114,15 @@ const ServiceCard = ({ showSection = false }) => {
             {serviceCard.slice(1).map((item, index) => {
               const Icon = item.icon;
               return (
-                <motion.article
-                  variants={cardVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                  initial="initial"
+                <article
                   key={index}
                   className={cardBaseClass}
+                  style={{ background: item.bg, borderColor: item.border }}
                 >
-                  <motion.div
-                    variants={cardOverlayVariants}
-                    className="absolute inset-0 z-0 rounded-lg bg-[#1D5ADD] pointer-events-none"
-                  />
-                  <i className="flex relative z-10 py-4 px-3 rounded-[0.25rem] text-3xl text-white bg-[#1D5ADD]">
+                  <i
+                    className="flex z-10 py-4 px-3 rounded-[0.25rem] text-3xl text-white"
+                    style={{ background: item.iconBg }}
+                  >
                     <Icon className="h-5 w-7" />
                   </i>
                   <div className="flex relative z-10 flex-col flex-grow p-1 items-start self-stretch gap-2">
@@ -185,7 +139,7 @@ const ServiceCard = ({ showSection = false }) => {
                   >
                     Contact Us
                   </Buttons2>
-                </motion.article>
+                </article>
               );
             })}
           </section>
@@ -205,7 +159,7 @@ const ServiceCard = ({ showSection = false }) => {
           </section>
           <section className="md:hidden grid grid-cols-1 gap-6">
             {serviceCard.map((item, index) => (
-              <motion.article
+              <article
                 key={index}
                 className="flex relative overflow-hidden flex-col justify-center py-4 px-1 gap-3 rounded-lg shadow-md border border-[#F0F0F0] transition bg-white"
               >
@@ -223,7 +177,7 @@ const ServiceCard = ({ showSection = false }) => {
                 <Buttons1 onClick={handleEmailClick} className="relative z-10 ">
                   Contact Us
                 </Buttons1>
-              </motion.article>
+              </article>
             ))}
           </section>
 
@@ -249,7 +203,7 @@ const ServiceCard = ({ showSection = false }) => {
                         {item.desc}
                       </p>
                     </div>
-                    <Buttons1 onClick={handleEmailClick} className="">
+                    <Buttons1 onClick={handleEmailClick} className="ml-1">
                       {item.button}
                     </Buttons1>
                   </div>

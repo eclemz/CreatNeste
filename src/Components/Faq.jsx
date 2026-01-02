@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { MdOutlineArrowDropDownCircle, MdOutlineSearch } from "react-icons/md";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
-import { Buttons1, Buttons } from "./Buttons";
+import { Buttons } from "./Buttons";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { faq } from "../Data/Data";
@@ -89,15 +89,15 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className={`flex w-full justify-between p-2 md:p-3 lg:py-2 lg:px-4 text-left text-base hover:shadow-md transition-all duration-300 font-semibold focus:outline-none rounded-[4px] ${
                     isOpen
-                      ? "bg-[#123787] text-white"
-                      : "bg-[#F0F0F0] text-[#313131] group"
+                      ? "bg-white text-[#1D5ADD] hover:shadow-none"
+                      : "bg-white text-[#313131] group"
                   }`}
                 >
                   <span>{faqItem.question}</span>
                   <MdOutlineArrowDropDownCircle
                     className={`${
                       isOpen
-                        ? "rotate-180 transform text-white"
+                        ? "rotate-180 transform text-[#1D5ADD]"
                         : "text-[#313131] "
                     } h-5 w-5 lg:h-6 lg:w-6`}
                   />
@@ -112,7 +112,7 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
                       transition={{ duration: 0.4, ease: "easeInOut" }}
                       className="w-full "
                     >
-                      <p className="px-4 py-4 text-sm md:text-base lg:text-lg shadow-md text-[#565656]">
+                      <p className="p-2 md:px-4 md:py-4 text-sm md:text-base lg:text-lg shadow-md text-[#565656]">
                         {faqItem.answer}
                       </p>
                     </motion.div>
@@ -147,21 +147,21 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
       <div className="flex flex-col items-center self-stretch gap-8 md:gap-3 lg:gap-6">
         <form
           onSubmit={handleSearchSubmit}
-          className="flex flex-col md:flex-row justify-center items-start md:items-center self-stretch py-1 px-1 md:pr-1 md:pl-3 lg:pl-4 rounded-[4px] border-[0.5px] border-[#9A9A9A] bg-[#FFF] shadow-[0_1px_2px_0_rgba(48,48,48,0.30),0_1px_3px_1px_rgba(48,48,48,0.15)] box-border"
+          className="flex flex-row justify-center items-start md:items-center self-stretch py-1 px-1 md:pr-1 md:pl-3 lg:pl-4 rounded-[4px] border-[0.5px] border-[#9A9A9A] bg-[#FFF] focus-within:shadow-[0_1px_2px_0_rgba(48,48,48,0.30),0_1px_3px_1px_rgba(48,48,48,0.15)] box-border"
         >
           <input
             type="search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Ask a question..."
-            className="font-inter text-center md:text-start p-2 md:p-0 self-stretch w-full outline-none placeholder:text-[#a7a3a3] placeholder:text-base focus:placeholder-transparent "
+            className="font-inter flex flex-col text-center md:text-start p-2 md:p-0 self-stretch w-full outline-none placeholder:text-[#a7a3a3] placeholder:text-base focus:placeholder-transparent "
           />
           {/* <Buttons type="submit" className="hover:scale-[1.01]">
             Search
           </Buttons> */}
 
-          <div className="hidden md:block border-[#9A9A9A] font-inter self-stretch md:self-auto py-2 px-3 md:py-3 md:px-4 md:gap-2 gap-1 lg:text-base md:text-base text-sm font-medium rounded-[0.25rem]">
-            <MdOutlineSearch className="h-5 w-5 text-[#9A9A9A]" />
+          <div className="border-[#9A9A9A] font-inter items-center self-center md:self-auto py-2 px-3 md:py-3 md:px-4 md:gap-2 gap-1 md:text-base text-sm font-medium rounded-[0.25rem]">
+            <MdOutlineSearch className="h-5 w-5 md:h-6 md:w-6 text-[#9A9A9A] justify-center" />
           </div>
         </form>
         <span className="font-inter text-center text-sm md:text-base text-[#4D4D4D]">
@@ -190,7 +190,7 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
   );
 
   return (
-    <main className="w-full flex flex-col items-center">
+    <main className="w-full flex flex-col items-center gap-6">
       {/* Search Section - Only show when showSearchSection is true */}
       {showSearchSection && renderSearchSection()}
 
@@ -217,15 +217,16 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
             <p className="font-inter text-sm md:text-base lg:text-lg text-center text-[#475467] ">
               Here is everything you need to know about our services.
             </p>
+            <div className="w-full lg:border rounded-3xl pt-11 pb-7 lg:px-5 bg-[#FFF] border-[#4376E3]">
+              {renderFaqList(displayFaqs)}
+            </div>
           </div>
-
-          {renderFaqList(displayFaqs)}
         </>
       )}
 
       {/* Home Page Call to Action */}
       {showSection && (
-        <section className="flex flex-col justify-center items-center gap-8">
+        <section className="hidden md:flex flex-col justify-center items-center gap-8">
           <div className="flex flex-col items-center gap-2">
             <span className="font-inter lg:text-lg font-semibold text-[#242424]">
               Do you still have questions?
@@ -235,10 +236,10 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
               here to listen and assist.
             </h3>
           </div>
-          <Buttons1 className="flex-1 w-[24.75rem]">
+          <Buttons className="flex-1 w-[24.75rem]">
             <TfiHeadphoneAlt className="h-6 w-4" />
             Give us a call
-          </Buttons1>
+          </Buttons>
         </section>
       )}
     </main>

@@ -19,7 +19,10 @@
       gtag("js", new Date());
 
       // Disable automatic page_view so SPA route changes are tracked manually
-      gtag("config", "G-E48EX467NF", { send_page_view: false });
+      gtag("config", "G-E48EX467NF", {
+        send_page_view: false,
+        debug_mode: true,
+      });
     </script>
   </head>
   <body>

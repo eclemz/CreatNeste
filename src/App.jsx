@@ -4,6 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import SeasonalMarquee from "./Components/SeasonalMarquee";
 import Navbar from "./Components/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
 import Home from "./Pages/Home";
@@ -14,12 +15,14 @@ import About from "./Pages/About";
 import ScrollToTop from "./Components/ScrollToTop";
 import FaqPage from "./Pages/FaqPage";
 import useGtag from "./hooks/useGtag";
+import Blog from "./Pages/Blog";
 
 function App() {
   const location = useLocation();
   useGtag();
   return (
     <>
+      <SeasonalMarquee />
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -52,6 +55,15 @@ function App() {
             element={
               <PageWrapper>
                 <Portfolio />
+              </PageWrapper>
+            }
+          />
+
+          <Route
+            path="/blog"
+            element={
+              <PageWrapper>
+                <Blog />
               </PageWrapper>
             }
           />

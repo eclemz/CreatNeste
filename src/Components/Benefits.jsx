@@ -73,19 +73,28 @@ function Benefits({ showAll = false, showSection = false }) {
                           transition={{ duration: 0.6, delay: index * 0.2 }}
                           whileHover="hover"
                           // whileTap="tap"
-                          className="group relative flex md:flex-1 md:flex-col flex-row w-full md:min-h-[13rem] min-h-[9rem] md:items-center items-start self-stretch md:gap-4 gap-2 md:py-6 md:px-4 py-3 px-2 md:self-stretch transition-all duration-600 ease-linear rounded-lg border border-[#F0F0F0] bg-[#E8EFFC] lg:bg-[#FFF] overflow-hidden lg:hover:bg-[#E8EFFC] hover:border hover:border-[#1D5ADD]"
+                          className="group relative flex md:flex-1 md:flex-col flex-row w-full md:min-h-[13rem] min-h-[9rem] md:items-center items-start self-stretch md:gap-4 gap-2 md:py-6 md:px-4 py-3 px-2 md:self-stretch transition-all duration-600 ease-linear rounded-lg border border-[#F0F0F0] bg-[#E8EFFC] overflow-hidden lg:hover:bg-[#E8EFFC] hover:border hover:border-[#1D5ADD]"
+                          style={{
+                            background: item.bg,
+                            borderColor: item.border,
+                          }}
                         >
                           <motion.div
                             variants={cardOverlayVariants}
                             initial="initial"
                             className=" absolute inset-0 z-0 rounded-lg bg-[#3a70d6]"
                           />
-                          <motion.i className="relative z-0 flex self-stretch md:self-center justify-center p-2 lg:h-14 lg:w-14 md:h-10 md:w-10 h-8 w-8 lg:p-4 lg:bg-[#E8EFFC] bg-[#FFFF] items-center lg:gap-[0.41rem] md:gap-1 gap-1 rounded-full">
-                            <motion.div
+                          <motion.i
+                            className="relative z-0 flex self-stretch md:self-center justify-center p-2 lg:h-14 lg:w-14 md:h-10 md:w-10 h-8 w-8 lg:p-4 lg:bg-[#E8EFFC] items-center lg:gap-[0.41rem] md:gap-1 gap-1 rounded-full"
+                            style={{ background: item.iconBg }}
+                          >
+                            {/* <motion.div
                               variants={iconOverlayVariants}
-                              className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#1D5ADD] to-sky-400 z-0 rounded-full"
-                            />
-                            <Icon className="z-20 flex group-hover:text-white transition-all duration-700 text-[#1D5ADD] lg:h-6 lg:w-8 md:h-5 md:w-4 w-6 h-6" />
+                              className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#1D5ADD] to-sky-400 z-0 rounded-full
+                              "
+                              style={{ background: item.iconOverlay }}
+                            /> */}
+                            <Icon className="z-20 flex group-hover:text-white transition-all duration-700 text-white lg:h-6 lg:w-8 md:h-5 md:w-4 w-6 h-6" />
                           </motion.i>
                           <div className="flex gap-1 max-w-full md:gap-0 flex-col md:items-center items-start self-stretch">
                             <h1 className="font-inter text-start text-base md:text-lg lg:text-xl font-semibold md:text-center text-[#242424]">

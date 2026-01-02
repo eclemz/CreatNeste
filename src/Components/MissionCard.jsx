@@ -33,7 +33,7 @@ function MissionCard() {
             Meet the Team
           </h3>
         </div>
-        <p className="flex font-inter text-base lg:text-lg lg:flex-1 text-[#475467]">
+        <p className="flex font-inter text-base lg:text-lg lg:flex-1 lg:pl-2 lg:border-l-4 lg:border-l-[#1D5ADD] text-[#475467]">
           Our team of diverse, passionate people that foster a{" "}
           <br className="md:hidden hidden lg:block" /> culture that empowers you
           to do your best work.

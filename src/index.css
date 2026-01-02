@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 18s linear infinite;
+}
+
 .footer li {
   display: flex;
   padding: 8px;
@@ -51,4 +66,8 @@
     width: 22.5rem;
     font-family: Inter;
   }
+}
+
+.text-shadow-sm {
+  text-shadow: 1px 0 0 currentColor;
 }

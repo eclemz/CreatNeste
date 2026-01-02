@@ -15,66 +15,102 @@ import { BiShuffle } from "react-icons/bi";
 
 export const serviceCard = [
   {
+    image: "/mentorship.jpg",
+    icon: FaRegHandshake,
+    iconBg: "#B61DDD",
+    title: "Branding",
+    button: "Build Your Brand",
+    bg: "#F9E7FE",
+    border: "#F4CEFF",
+    desc: `We help businesses define their identity through creative brand strategies, logos, and messaging that connect with the Nigerian market and beyond.`,
+  },
+
+  {
+    image: "/design.jpg",
+    icon: FaFigma,
+    iconBg: "#DD1D37",
+    title: "UI/UX Design",
+    button: "See Our Designs",
+    bg: "#FEE5E9",
+    border: "#FFCEDF",
+    desc: `At our company, we specialize in designing digital products that look great, solve real problems and engage users effectively essential for driving results and ensuring customer satisfaction. `,
+  },
+
+  {
     image: "/management.png",
     icon: FaRegFolderOpen,
+    iconBg: "#1D5ADD",
     title: "Product Management",
     button: "Chat With Our Product Team",
+    bg: "#E8EFFC",
+    border: "#CED5FF",
     desc: `From concept to launch, we expertly manage product lifecycles, incorporating market research and user feedback to ensure your software solutions not only meet but exceed expectations, delivering maximum business impact and driving growth.
 `,
   },
   {
     image: "/software.jpg",
     icon: FaCode,
+    iconBg: "#DD8A1D",
     title: "Software Developement",
     button: "See Our Web Projects",
+    bg: "#FFF0DC",
+    border: "#FFDECE",
     desc: `We develop secure, scalable, and user-friendly software tailored to your business operations whether web apps, enterprise systems, or automation tools.`,
-  },
-
-  {
-    image: "/design.jpg",
-    icon: FaFigma,
-    title: "UI/UX Design",
-    button: "See Our Designs",
-    desc: `At our company, we specialize in designing digital products that look great, solve real problems and engage users effectively essential for driving results and ensuring customer satisfaction. `,
-  },
-
-  {
-    image: "/mentorship.jpg",
-    icon: FaRegHandshake,
-    title: "Branding",
-    button: "Build Your Brand",
-    desc: `We help businesses define their identity through creative brand strategies, logos, and messaging that connect with the Nigerian market and beyond.`,
   },
 ];
 
 export const benefits = [
   {
     icon: PiBinocularsFill,
+    bg: "#FCCEEE",
+    border: "#C11574",
+    iconBg: "#C11574",
+    iconOverlay: "#FCCEEE",
     title: "Increased Visibility",
     desc: `We will help you enhance your online presence through expertly designed digital products driving more traffic and potential customers to your business.`,
   },
   {
     icon: GiStoneCrafting,
+    bg: "#FDF5D8",
+    border: "#988D61",
+    iconBg: "#988D61",
+    iconOverlay: "#FDF5D8",
     title: "Expertise and Specialization",
     desc: `We have specialized teams with expertise in various technologies which ensures high-quality outcomes tailored to business needs.`,
   },
   {
     icon: MdOutlineSecurity,
+    bg: "#E8EFFC",
+    border: "#123787",
+    iconBg: "#123787",
+    iconOverlay: "#E8EFFC",
     title: "Enhance Security",
     desc: `We have dedicated security experts who ensure that digital products are developed with robust security measures, protecting businesses from cyber threats.`,
   },
   {
     icon: SiProbot,
+    bg: "#E8EFFC",
+    border: "#123787",
+    iconBg: "#123787",
+    iconOverlay: "#E8EFFC",
     title: "Access to Latest Technology",
     desc: `We stay updated with the latest trends and technologies in the digital space, providing our clients with innovative solutions and competitive advantages.`,
   },
   {
     icon: GiAutoRepair,
+    bg: "#FCCEEE",
+    border: "#C11574",
+    iconBg: "#C11574",
+    iconOverlay: "#FCCEEE",
     title: "Long-Term Support and Maintenance",
     desc: `We typically offer ongoing support and maintenance services, ensuring that digital solutions remain up-to-date, functional, and secure over time.`,
   },
   {
     icon: BiShuffle,
+    bg: "#FDF5D8",
+    border: "#988D61",
+    iconBg: "#988D61",
+    iconOverlay: "#FDF5D8",
     title: "Scalability and Flexibility",
     desc: `We can scale resources up or down based on project requirements, offering flexibility to adapt to business changes without long-term commitments`,
   },
@@ -179,24 +215,22 @@ export const testimonial = [
 
 export const projectCard = [
   {
-    image: "/project.png",
+    id: 1,
+    image: "/project1.png",
     title: "Portfolio",
-    name: "Ola",
+    name: "Chime Chinonyelum",
   },
   {
-    image: "/project.png",
-    title: "Edtech",
-    name: "Ola",
+    id: 2,
+    image: "/project2.png",
+    title: "Portfolio",
+    name: "Ujunwa Linda",
   },
   {
+    id: 3,
     image: "/project.png",
-    title: "Fintech",
-    name: "Ola",
-  },
-  {
-    image: "/project.png",
-    title: "Medtech",
-    name: "Ola",
+    title: "Branding",
+    name: "Farmsplit",
   },
 ];
 
@@ -278,4 +312,5 @@ export const navLinks = [
   { name: "Services", type: "route", to: "/services" },
   { name: "Portfolio", type: "route", to: "/portfolio" },
   { name: "FAQ", type: "route", to: "/faqpage" },
+  { name: "Blog", type: "route", to: "/blog" },
 ];

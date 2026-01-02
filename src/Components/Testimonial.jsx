@@ -43,14 +43,29 @@ function Testimonial() {
   };
 
   return (
-    <main className="flex flex-col justify-center items-start lg:py-16 lg:px-14 md:py-14 md:px-10 py-6 px-4 gap-6">
+    <main className="flex flex-col justify-center relative items-start lg:py-16 lg:px-14 md:py-14 md:px-10 py-6 px-4 gap-6 lg:bg-[#E8EFFC]">
+      <img
+        src="/Star1.svg"
+        className="hidden lg:block h-10 w-10  absolute left-52 top-6"
+        alt=""
+      />
+      <img
+        src="/Star1.svg"
+        className="hidden lg:block h-10 w-10 absolute right-72 top-14"
+        alt=""
+      />
+      <img
+        src="/Star1.svg"
+        className="hidden lg:block h-10 w-10 absolute right-24 bottom-10 "
+        alt=""
+      />
       {/* Section Heading */}
-      <section className="flex flex-col justify-center items-start gap-2 lg:gap-5 lg:items-center lg:self-stretch">
-        <div className="flex flex-col items-start self-stretch gap-1 md:gap-3 lg:justify-center">
-          <span className="font-inter text-xs lg:text-sm font-semibold text-[#1D5ADD] py-1 px-2 rounded-lg">
+      <section className="flex flex-col justify-center items-start gap-2 lg:gap-5 lg:items-center lg:self-center">
+        <div className="flex flex-col items-start self-stretch gap-1 md:gap-3 lg:justify-center lg:items-center">
+          <span className="font-inter text-xs lg:text-sm font-semibold text-[#1D5ADD] md:py-1 md:px-2 rounded-lg">
             TESTIMONIAL
           </span>
-          <div className="flex flex-col items-start self-stretch lg:justify-center">
+          <div className="flex flex-col items-start self-stretch lg:items-center lg:justify-center">
             <h4 className="font-inter text-xl md:text-3xl lg:text-[2rem] font-semibold text-[#242424]">
               See how we made a difference
             </h4>

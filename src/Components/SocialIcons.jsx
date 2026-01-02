@@ -8,10 +8,30 @@ import { AiFillInstagram } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { icon: AiFillInstagram, color: "#E1306C", name: "Instagram", url:'#' },
-  { icon: FaLinkedinIn, color: "#0077b5", name: "LinkedIn", url:'#' },
-  { icon: FaFacebookF, color: "#1DA1F2", name: "Facebook", url:'#' },
-  { icon: FaXTwitter, color: "#000000", name: "Twitter", url:'#' },
+  {
+    icon: AiFillInstagram,
+    color: "#E1306C",
+    name: "Instagram",
+    url: "https://www.instagram.com/creatneste?igsh=NnQ3MjhrZmcyd3Nq&utm_source=qr",
+  },
+  {
+    icon: FaLinkedinIn,
+    color: "#0077b5",
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/company/creatneste/",
+  },
+  {
+    icon: FaFacebookF,
+    color: "#1DA1F2",
+    name: "Facebook",
+    url: "https://www.facebook.com/share/1AomVSEjeH/?mibextid=wwXIfr",
+  },
+  {
+    icon: FaXTwitter,
+    color: "#000000",
+    name: "Twitter",
+    url: "https://x.com/creatneste?s=21&t=gup5PZZ-OXVq3pLpCoFP0A",
+  },
 ];
 
 const SocialIcons = () => {

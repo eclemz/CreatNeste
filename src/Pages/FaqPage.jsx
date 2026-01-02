@@ -4,7 +4,7 @@ import ContactPreview from "../Components/ContactPreview";
 
 function FaqPage() {
   return (
-    <main>
+    <main className="mt-8">
       {/* Pass showSearchSection prop to enable search functionality */}
       <Faq showSection={false} showSearchSection={true} />
       <ContactPreview />
