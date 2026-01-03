@@ -1,5 +1,6 @@
 import React from "react";
 import { getSeasonalMessage } from "../Utilities/getSeasonalMessage";
+import { color } from "framer-motion";
 
 const SeasonalMarquee = () => {
   const message = getSeasonalMessage();
@@ -8,67 +9,68 @@ const SeasonalMarquee = () => {
 
   return (
     <div
-      className={`${message.bg} bg-red-500 h-10 text-white overflow-hidden fixed top-0 left-0 right-0 z-[60]`}
+      className={`${message.bg} h-10 overflow-hidden fixed top-0 left-0 right-0 z-[60]`}
+      style={{ background: message.bg, color: message.color }}
     >
       <div className="flex items-center h-full gap-6 animate-marquee whitespace-nowrap">
-        <img src={message.icon1} alt="" className="w-10 h-10" />
+        <img src={message.icon1} alt="" className="w-8 h-8" />
         <span className="font-inter font-medium text-sm md:text-base">
           {message.text}
         </span>
         {/* <span className="mx-6">•</span> */}
-        <img src={message.icon2} alt="" className="w-10 h-10" />
+        <img src={message.icon2} alt="" className="w-8 h-8" />
         <span className="font-inter font-medium text-sm md:text-base">
           {message.text}
         </span>
-        <img src={message.icon3} alt="" className="w-10 h-10" />
-        <span className="font-inter font-medium text-sm md:text-base">
-          {message.text}
-        </span>
-        {/* <span className="mx-6">•</span> */}
-        <img src={message.icon2} alt="" className="w-10 h-10" />
-        <span className="font-inter font-medium text-sm md:text-base">
-          {message.text}
-        </span>
-        <img src={message.icon3} alt="" className="w-10 h-10" />
+        <img src={message.icon3} alt="" className="w-8 h-8" />
         <span className="font-inter font-medium text-sm md:text-base">
           {message.text}
         </span>
         {/* <span className="mx-6">•</span> */}
-        <img src={message.icon2} alt="" className="w-10 h-10" />
+        <img src={message.icon4} alt="" className="w-8 h-8" />
+        <span className="font-inter font-medium text-sm md:text-base">
+          {message.text}
+        </span>
+        <img src={message.icon5} alt="" className="w-8 h-8" />
+        <span className="font-inter font-medium text-sm md:text-base">
+          {message.text}
+        </span>
+        {/* <span className="mx-6">•</span> */}
+        <img src={message.icon2} alt="" className="w-8 h-8" />
         <span className="font-inter font-medium text-sm md:text-base">
           {message.text}
         </span>
 
-        <img src={message.icon1} alt="" className="w-10 h-10" />
+        <img src={message.icon1} alt="" className="w-8 h-8" />
         <span className="font-inter font-medium text-sm md:text-base">
           {message.text}
         </span>
         {/* <span className="mx-6">•</span> */}
-        <img src={message.icon2} alt="" className="w-10 h-10" />
+        <img src={message.icon2} alt="" className="w-8 h-8" />
         <span className="font-inter font-medium text-sm md:text-base">
           {message.text}
         </span>
-        <img src={message.icon3} alt="" className="w-10 h-10" />
+        <img src={message.icon3} alt="" className="w-8 h-8" />
         <span className="font-inter font-medium text-sm md:text-base">
           {message.text}
         </span>
         {/* <span className="mx-6">•</span> */}
-        <img src={message.icon2} alt="" className="w-10 h-10" />
+        <img src={message.icon4} alt="" className="w-8 h-8" />
         <span className="font-inter font-medium text-sm md:text-base">
           {message.text}
         </span>
-        <img src={message.icon3} alt="" className="w-10 h-10" />
+        <img src={message.icon5} alt="" className="w-8 h-8" />
         <div>
-          <img src={message.icon1} alt="" className="w-10 h-10" />
+          <img src={message.icon1} alt="" className="w-8 h-8" />
           <span className="font-inter font-medium text-sm md:text-base">
             {message.text}
           </span>
           {/* <span className="mx-6">•</span> */}
-          <img src={message.icon2} alt="" className="w-10 h-10" />
+          <img src={message.icon2} alt="" className="w-8 h-8" />
           <span className="font-inter font-medium text-sm md:text-base">
             {message.text}
           </span>
-          <img src={message.icon3} alt="" className="w-10 h-10" />
+          <img src={message.icon5} alt="" className="w-8 h-8" />
         </div>
       </div>
     </div>

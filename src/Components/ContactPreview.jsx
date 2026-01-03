@@ -12,16 +12,18 @@ function ContactPreview() {
       //     "linear-gradient(0deg, rgba(232, 239, 252, 0.96) 0%, rgba(232, 239, 252, 0.96) 100%), url('/bluepattern.png') lightgray 50% / cover no-repeat",
       // }}
     >
-      <img
-        src="/Star.svg"
-        className=" hidden md:block md:h-60 md:w-60 lg:h-[9rem] lg:w-[9rem] absolute right-[35.9rem] lg:right-[-1.5rem] lg:top-[-3rem] md:top-[10.5625rem] md:right-[21rem] lt:top-[7rem] lt:right-[19rem] top-[5.2rem]"
-        alt=""
-      />
-      <img
-        src="/Star.svg"
-        className="hidden md:block h-10 w-10  absolute right-[35.9rem] lg:left-[13.7rem] lg:bottom-[6.25rem] md:top-[10.5625rem] md:right-[21rem] lt:top-[7rem] lt:right-[19rem] top-[5.2rem]"
-        alt=""
-      />
+      <div className="hidden lg:flex">
+        <img
+          src="/Star.svg"
+          className="md:h-60 md:w-60 lg:h-[9rem] lg:w-[9rem] absolute right-[35.9rem] lg:right-[-1.5rem] lg:top-[-3rem] md:top-[10.5625rem] md:right-[21rem] lt:top-[7rem] lt:right-[19rem] top-[5.2rem]"
+          alt=""
+        />
+        <img
+          src="/Star.svg"
+          className="h-10 w-10  absolute right-[35.9rem] lg:left-[13.7rem] lg:bottom-[6.25rem] md:top-[10.5625rem] md:right-[21rem] lt:top-[7rem] lt:right-[19rem] top-[5.2rem]"
+          alt=""
+        />
+      </div>
       <section className="flex flex-col justify-center md:self-center items-center md:gap-3 gap-2 self-stretch">
         <h4 className="font-inter text-xl md:text-3xl text-[#282828] text-center font-semibold">
           Need our Services?

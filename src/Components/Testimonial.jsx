@@ -44,21 +44,23 @@ function Testimonial() {
 
   return (
     <main className="flex flex-col justify-center relative items-start lg:py-16 lg:px-14 md:py-14 md:px-10 py-6 px-4 gap-6 lg:bg-[#E8EFFC]">
-      <img
-        src="/Star1.svg"
-        className="hidden lg:block h-10 w-10  absolute left-52 top-6"
-        alt=""
-      />
-      <img
-        src="/Star1.svg"
-        className="hidden lg:block h-10 w-10 absolute right-72 top-14"
-        alt=""
-      />
-      <img
-        src="/Star1.svg"
-        className="hidden lg:block h-10 w-10 absolute right-24 bottom-10 "
-        alt=""
-      />
+      <div className="hidden lg:block">
+        <img
+          src="/Star1.svg"
+          className="h-10 w-10  absolute left-52 top-6"
+          alt=""
+        />
+        <img
+          src="/Star1.svg"
+          className="h-10 w-10 absolute right-72 top-14"
+          alt=""
+        />
+        <img
+          src="/Star1.svg"
+          className="h-10 w-10 absolute right-24 bottom-10 "
+          alt=""
+        />
+      </div>
       {/* Section Heading */}
       <section className="flex flex-col justify-center items-start gap-2 lg:gap-5 lg:items-center lg:self-center">
         <div className="flex flex-col items-start self-stretch gap-1 md:gap-3 lg:justify-center lg:items-center">

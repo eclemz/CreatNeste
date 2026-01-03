@@ -40,7 +40,7 @@ function Benefits({ showAll = false, showSection = false }) {
 
   return (
     <>
-      <main className="flex flex-col md:flex-row lg:py-[3.75rem] lg:px-14 md:p-10 py-6 px-4 md:justify-between justify-center items-start md:items-center lg:gap-6 md:gap-5 gap-6 lg:self-stretch">
+      <main className="flex flex-col md:flex-row lg:py-0 lg:px-14 md:p-10 py-6 px-4 md:justify-between justify-center items-start md:items-center lg:gap-6 md:gap-5 gap-6 lg:self-stretch">
         <AnimatePresence>
           <div className="flex flex-col md:flex-1 md:gap-6">
             {showSection && (

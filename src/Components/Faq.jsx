@@ -172,12 +172,12 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
   );
 
   const renderCategoryFilters = () => (
-    <div className="w-full snap-x snap-mandatory overflow-x-scroll md:overflow-x-auto scrollbar-hide flex md:justify-between border-b-2 border-[#F0F0F0]">
+    <div className="w-full snap-x snap-mandatory overflow-x-scroll md:overflow-x-auto scrollbar-hide flex md:justify-between border-b-2 gap-2 border-[#F0F0F0]">
       {categories.map((cat, index) => (
         <button
           key={index}
           onClick={() => handleCategoryChange(cat)}
-          className={`flex md:flex-1 p-2 whitespace-nowrap justify-center items-center md:text-sm lg:text-base ${
+          className={`flex md:flex-1 py-2 whitespace-nowrap justify-center items-center md:text-sm lg:text-base ${
             selectedCategory === cat
               ? "border-b-2 border-[#123787] font-semibold text-[#123787]"
               : "bg-white text-[#242424] hover:text-[#242424]/50"

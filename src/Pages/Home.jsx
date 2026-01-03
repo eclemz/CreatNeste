@@ -31,26 +31,28 @@ function Home() {
         <ProjectCard showSection={false} />
       </section>
       <section className="flex flex-col items-center relative lg:bg-[#E8EFFC] py-6 px-4 md:py-14 md:px-28 lg:py-16 lg:px-60 lg:gap-8 gap-6">
-        <img
-          src="/Star1.svg"
-          className="hidden lg:block h-8 w-8 absolute right-[35rem] top-14 "
-          alt=""
-        />
-        <img
-          src="/Star1.svg"
-          className="hidden lg:block h-7 w-7 absolute left-24 top-56 "
-          alt=""
-        />
-        <img
-          src="/Star1.svg"
-          className="hidden lg:block h-8 w-8 absolute right-36 top-96 "
-          alt=""
-        />
-        <img
-          src="/Star1.svg"
-          className="hidden lg:block h-10 w-10 absolute left-32 bottom-24 "
-          alt=""
-        />
+        <div className="hidden lg:block">
+          <img
+            src="/Star1.svg"
+            className="h-8 w-8 absolute right-[35rem] top-14 "
+            alt=""
+          />
+          <img
+            src="/Star1.svg"
+            className="h-7 w-7 absolute left-24 top-56 "
+            alt=""
+          />
+          <img
+            src="/Star1.svg"
+            className="h-8 w-8 absolute right-36 top-96 "
+            alt=""
+          />
+          <img
+            src="/Star1.svg"
+            className="h-10 w-10 absolute left-32 bottom-24 "
+            alt=""
+          />
+        </div>
         <Faq showSection={true} showSearchSection={false} />
       </section>
       <Testimonial />
