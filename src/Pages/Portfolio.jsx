@@ -24,8 +24,8 @@ function Portfolio() {
         ctaAction={() => console.log("See Projects clicked")}
       />
 
-      <section className="flex flex-col justify-center items-center py-5 px-4 md:py-4 md:px-10 gap-2 md:self-stretch">
-        <span className="font-inter text-xs md:font-bold font-semibold text-[#1D5ADD]">
+      <section className="flex flex-col lg:py-16 lg:px-14 md:px-10 px-4 gap-4 lg:gap-8">
+        <span className="font-inter text-center text-xs md:font-bold font-semibold text-[#1D5ADD]">
           SOME OF OUR BEST PROJECTS
         </span>
         <h3 className="font-inter text-center md: text-2xl md:text-[1.75rem] font-semibold mb-2 text-[#242424]">

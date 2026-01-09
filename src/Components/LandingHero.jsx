@@ -31,7 +31,7 @@ function LandingHero() {
 
   return (
     <main
-      className="flex flex-col w-full relative justify-center items-start md:self-stretch md:gap-20 gap-4 flex-1 md:mt-24 md:pt-5 md:px-10 lt:pt-10 lg:pb-32 lg:pt-10 lg:px-14 lt:pb-20 md:py-20 pt-56 pb-10 bg-cover bg-no-repeat bg-center lg:mt-32"
+      className="flex flex-col w-full relative justify-center items-start md:self-stretch md:gap-20 gap-4 flex-1 md:mt-24 md:pt-5 md:px-10 lt:pt-10 lg:pb-32 lg:pt-10 xl:px-14 lt:pb-20 md:py-20 pt-56 pb-10 bg-cover bg-no-repeat bg-center lg:mt-32"
       style={{ backgroundImage: `url('/hero.png')` }}
     >
       <div className="absolute inset-0 left-0 bg-[linear-gradient(to_right,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.95)_10%,_rgba(255,255,255,0.8)_60%,_rgba(255,255,255,0.4)_70%,_rgba(255,255,255,0)_90%)]">

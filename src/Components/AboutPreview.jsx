@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function AboutPreview() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center lg:gap-6 md:gap-5 md:self-stretch gap-9 lg:py-16 lg:px-14 md:p-10 py-6 px-4 ">
+    <div className="flex flex-col md:flex-row justify-between items-center lg:gap-6 md:gap-5 md:self-stretch gap-9 xl:py-16 xl:px-14 md:p-10 py-6 px-4 ">
       <picture className="hidden md:flex ">
         <img
           src="/Subtract.svg"
@@ -20,7 +20,7 @@ function AboutPreview() {
         <div className="flex flex-col items-start self-stretch gap-3 lg:pr-10">
           <h4 className="text-xl md:text-3xl lg:text-[2rem] font-semibold text-[#242424] font-inter leading-6 self-stretch">
             A Human-centered approach <br className="lt:hidden lg:block" /> to
-            your <span className="text-[#1D5ADD]">IT</span> challenges.
+            your <span className="text-[#1D5ADD]">Software</span> challenges.
           </h4>
           <p className="text-sm md:text-sm lg:text-base text-[#565656] font-inter lg:self-stretch">
             We’re a team of developers, designers, and product managers

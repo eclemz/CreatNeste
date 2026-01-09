@@ -1,7 +1,7 @@
 import React from "react";
 import { serviceCard } from "../Data/Data.js";
 import { Buttons2, Buttons1 } from "./Buttons.jsx";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ServiceCard = ({ showSection = false }) => {
   const handleEmailClick = () => {
@@ -9,11 +9,21 @@ const ServiceCard = ({ showSection = false }) => {
       "mailto:creatneste@gmail.com?subject=Let's%20Work%20Together";
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   const cardBaseClass =
     "flex relative overflow-hidden flex-col group items-start justify-end self-stretch md:p-4 py-4 px-2 gap-4 rounded-lg border-2  min-h-[250px] lg:min-h-[250px] transition-all duration-300 ease-in-out ";
 
   return (
-    <main className="flex flex-col justify-center items-center md:self-stretch gap-8 lg:py-16 lg:px-14 md:px-10 md:py-10 py-6 px-4">
+    <main className="flex flex-col justify-center items-center md:self-stretch gap-8 xl:py-16 xl:px-14 md:p-10 py-6 px-4">
       {showSection && (
         <div className="flex flex-col lt:flex lt:flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-10">
           {/* Left section */}
@@ -50,7 +60,7 @@ const ServiceCard = ({ showSection = false }) => {
                   style={{ background: item.bg, borderColor: item.border }}
                 >
                   <i
-                    className="flex z-10 py-4 px-3 rounded-[0.25rem] lg:gap-2 text-3xl text-white"
+                    className="flex z-10 py-4 px-3 rounded-full lg:gap-2 text-3xl text-white"
                     style={{ background: item.iconBg }}
                   >
                     <Icon className="h-5 w-7" />
@@ -85,7 +95,7 @@ const ServiceCard = ({ showSection = false }) => {
                   style={{ background: item.bg, borderColor: item.border }}
                 >
                   <i
-                    className="flex z-10 py-4 px-3 rounded-[0.25rem] text-3xl text-white"
+                    className="flex z-10 py-4 px-3 rounded-full text-3xl text-white"
                     style={{ background: item.iconBg }}
                   >
                     <Icon className="h-5 w-7" />
@@ -120,7 +130,7 @@ const ServiceCard = ({ showSection = false }) => {
                   style={{ background: item.bg, borderColor: item.border }}
                 >
                   <i
-                    className="flex z-10 py-4 px-3 rounded-[0.25rem] text-3xl text-white"
+                    className="flex z-10 py-4 px-3 rounded-full text-3xl text-white"
                     style={{ background: item.iconBg }}
                   >
                     <Icon className="h-5 w-7" />
@@ -182,43 +192,52 @@ const ServiceCard = ({ showSection = false }) => {
           </section>
 
           {/* For Tablet and Desktop */}
-          <section className="hidden md:flex flex-col lg:gap-10 md:gap-5 self-stretch w-full">
-            {serviceCard.map((item, index) => {
-              const Icon = item.icon;
-              const isEven = index % 2 === 0;
+          <AnimatePresence>
+            <motion.section
+              variants={containerVariants}
+              className="hidden md:flex flex-col lg:gap-10 md:gap-5 self-stretch w-full"
+            >
+              {serviceCard.map((item, index) => {
+                const Icon = item.icon;
+                const isEven = index % 2 === 0;
 
-              return (
-                <motion.article
-                  key={index}
-                  className={`flex relative overflow-hidden flex-col md:flex-row ${
-                    !isEven ? "md:flex-row-reverse" : ""
-                  } lg:items-center md:items-start gap-5 p-5 rounded-lg md:gap-6 lg:py-5 lg:px-0 lg:gap-10 bg-white`}
-                >
-                  <div className="relative z-10 flex-1 flex flex-col items-start gap-5 lg:gap-6 lg:self-stretch">
-                    <div className="flex flex-col items-start justify-center lg:gap-3 lg:py-3">
-                      <h3 className="text-[#242424] font-semibold text-lg lg:text-xl font-inter">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm md:text-base font-inter text-[#565656]">
-                        {item.desc}
-                      </p>
-                    </div>
-                    <Buttons1 onClick={handleEmailClick} className="ml-1">
-                      {item.button}
-                    </Buttons1>
-                  </div>
+                return (
+                  <motion.article
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                    className={`flex relative overflow-hidden flex-col md:flex-row ${
+                      !isEven ? "md:flex-row-reverse" : ""
+                    } lg:items-center md:items-start gap-5 p-5 rounded-lg md:gap-6 lg:py-5 lg:px-0 lg:gap-10 bg-white`}
+                  >
+                    <motion.div className="relative z-10 flex-1 flex flex-col items-start gap-5 lg:gap-6 lg:self-stretch">
+                      <div className="flex flex-col items-start justify-center lg:gap-3 lg:py-3">
+                        <h3 className="text-[#242424] font-semibold text-lg lg:text-xl font-inter">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm md:text-base font-inter text-[#565656]">
+                          {item.desc}
+                        </p>
+                      </div>
+                      <Buttons1 onClick={handleEmailClick} className="ml-1">
+                        {item.button}
+                      </Buttons1>
+                    </motion.div>
 
-                  <picture className="relative z-10 flex-1">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="md:w-full h-64 md:h-72 lg:h-[21.5625rem] lg:flex-1 object-cover rounded-xl"
-                    />
-                  </picture>
-                </motion.article>
-              );
-            })}
-          </section>
+                    <motion.picture className="relative z-10 flex-1">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="md:w-full h-64 md:h-72 lg:h-[21.5625rem] lg:flex-1 object-cover rounded-xl"
+                      />
+                    </motion.picture>
+                  </motion.article>
+                );
+              })}
+            </motion.section>
+          </AnimatePresence>
         </>
       )}
     </main>

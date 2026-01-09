@@ -13,8 +13,8 @@ function Hero({
   return (
     <section
       className="relative flex flex-col justify-center bg-cover bg-center items-start
-      lg:px-14 lg:pt-20 lg:pb-40 md:py-20 md:px-10
-       pt-56 pb-10 px-4 gap-4 md:gap-8 mt-32"
+      xl:px-14 xl:pt-20 xl:pb-40 md:py-20 md:px-10
+       pt-56 pb-10 px-4 gap-4 md:gap-8 xl:mt-32 md:mt-28 mt-32"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}

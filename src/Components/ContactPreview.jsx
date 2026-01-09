@@ -6,21 +6,21 @@ import { Buttons, Buttons1 } from "./Buttons";
 function ContactPreview() {
   return (
     <main
-      className="flex flex-col justify-center items-center md:self-stretch md:py-16 md:px-16 py-6 px-4 gap-6 bg-white relative overflow-hidden"
+      className="flex flex-col justify-center items-center md:self-stretch xl:p-16 md:p-10 py-6 px-4 gap-6 bg-white relative overflow-hidden"
       // style={{
       //   background:
       //     "linear-gradient(0deg, rgba(232, 239, 252, 0.96) 0%, rgba(232, 239, 252, 0.96) 100%), url('/bluepattern.png') lightgray 50% / cover no-repeat",
       // }}
     >
-      <div className="hidden lg:flex">
+      <div className="hidden xl:flex">
         <img
           src="/Star.svg"
-          className="md:h-60 md:w-60 lg:h-[9rem] lg:w-[9rem] absolute right-[35.9rem] lg:right-[-1.5rem] lg:top-[-3rem] md:top-[10.5625rem] md:right-[21rem] lt:top-[7rem] lt:right-[19rem] top-[5.2rem]"
+          className="md:h-60 md:w-60 h-[9rem] w-[9rem] absolute right-[-1.5rem] top-[-3rem]"
           alt=""
         />
         <img
           src="/Star.svg"
-          className="h-10 w-10  absolute right-[35.9rem] lg:left-[13.7rem] lg:bottom-[6.25rem] md:top-[10.5625rem] md:right-[21rem] lt:top-[7rem] lt:right-[19rem] top-[5.2rem]"
+          className="h-10 w-10  absolute  left-[9.7rem] bottom-[6.25rem]"
           alt=""
         />
       </div>

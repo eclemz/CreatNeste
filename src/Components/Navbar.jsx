@@ -11,7 +11,7 @@ function Navbar() {
   };
   return (
     <header
-      className={`flex flex-col md:flex-row bg-white text-black pt-9 pb-4 px-4 md:py-4 md:px-10 md:justify-between md:items-center md:self-stretch items-start md:gap-0 gap-5 fixed top-8 z-50 w-screen oerflow-x-hidden shadow-lg duration-300`}
+      className={`flex flex-col md:flex-row bg-white text-black pt-9 pb-4 px-4 md:py-4 xl:px-14 md:px-10 md:justify-between md:items-center md:self-stretch items-start md:gap-0 gap-5 fixed top-8 z-50 w-screen oerflow-x-hidden shadow-lg duration-300`}
     >
       {/* For Mobile */}
       <div className=" md:hidden flex justify-between items-center w-full ">
@@ -47,7 +47,7 @@ function Navbar() {
       </div>
 
       {/* For Tablet & Desktop */}
-      <nav className="hidden md:flex md:flex-row bg-white text-black md:py-4 md:px-10  lg:pt-8 lg:pb-4 lg:px-14 md:justify-between md:items-center md:self-stretch items-start fixed top-8 left-0 right-0 z-50 shadow-lg duration-300">
+      <nav className="hidden md:flex md:flex-row bg-white text-black md:py-4 md:px-10  xl:pt-8 xl:pb-4 xl:px-14 md:justify-between md:items-center md:self-stretch items-start fixed top-8 left-0 right-0 z-50 shadow-lg duration-300">
         <div className="lg:w-[217px] md:w-[120px] h-9 md:h-4 flex items-center">
           <NavLink to="/">
             <img src="/logo_special.svg" alt="Logo" className="h-full w-auto" />

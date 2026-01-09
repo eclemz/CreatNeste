@@ -16,6 +16,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 import FaqPage from "./Pages/FaqPage";
 import useGtag from "./hooks/useGtag";
 import Blog from "./Pages/Blog";
+import FloatingWhatsApp from "./Components/FLoatingWhatsapp";
 
 function App() {
   const location = useLocation();
@@ -77,6 +78,7 @@ function App() {
           />
         </Routes>
       </AnimatePresence>
+      <FloatingWhatsApp />
       <Footer />
       <ScrollToTop />
     </>

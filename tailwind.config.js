@@ -12,8 +12,8 @@ export default {
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
-        lt: { raw: "(width: 1024px) and (height: 1366px)" }, // Portrait
-        "lt-landscape": { raw: "(width: 1366px) and (height: 1024px)" },
+        lt: { raw: "(width: 1366px) and (height: 1024px)" }, // Portrait
+        "lt-portrait": { raw: "(width: 1024px) and (height: 1366px)" },
       },
     },
   },

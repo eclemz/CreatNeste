@@ -3,6 +3,7 @@ import MissionCard from "../Components/MissionCard";
 import TeamCard from "../Components/TeamCard";
 import ContactPreview from "../Components/ContactPreview";
 import Hero from "../Components/Hero";
+import Metrics from "../Components/Metrics";
 
 function About() {
   return (
@@ -12,7 +13,7 @@ function About() {
         overline="CRAFTING SEAMLESS DIGITAL EXPERIENCES"
         title={
           <>
-            A <span className="text-[#1D5ADD]">People-centred</span> <br />
+            A People-centred <br />
             approach to your IT <br />
             challenges
           </>
@@ -22,8 +23,8 @@ function About() {
         ctaAction={() => console.log("See Projects clicked")}
       />
       <MissionCard />
-      <section className="stretch flex flex-col items-center self-stretch lg:gap-6 md:gap-5 gap-4 md:p-10 lg:py-16 lg:px-14 pt-10 pb-5 px-4">
-        <div className="lg:w-[80rem] lt:w-auto flex flex-col md:flex-row items-center justify-center md:justify-between self-stretch gap-6">
+      <section className="stretch flex flex-col items-center self-stretch lg:gap-6 md:gap-5 gap-4 md:p-10 xl:py-16 xl:px-14 pt-10 pb-5 px-4">
+        <div className="xl:w-[80rem] lt:w-auto flex flex-col md:flex-row items-center justify-center md:justify-between self-stretch gap-6">
           <picture className="flex-1 items-center lt:w-[50%] lt:h-[21.8rem]">
             <img
               src="/story.png"
@@ -52,6 +53,16 @@ function About() {
           </div>
         </div>
       </section>
+      <Metrics
+        title="OUR SOFTWARE SOLUTIONS"
+        subtitle="Our Impact"
+        metrics={[
+          { label: "Completed Projects", value: 10 },
+          { label: "Happy Clients", value: 15 },
+          { label: "Industry Experts", value: 6 },
+          { label: "Awards Won", value: 12 },
+        ]}
+      />
       <TeamCard />
       <ContactPreview />
     </main>

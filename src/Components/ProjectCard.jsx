@@ -18,16 +18,18 @@ function ProjectCard({ showSection = false }) {
     initial: { opacity: 0, y: 24, scale: 0.98 },
     animate: { opacity: 1, y: 0, scale: 1 },
     exit: { opacity: 0, y: 16, scale: 0.98 },
-    hover: { scale: 0.95, boxShadow: "" },
+    hover: {
+      scale: 0.97,
+      boxShadow: "0 10px 20px rgba(0,0,0,0.12), 0 6px 6px rgba(0,0,0,0.08)",
+      transition: {
+        duration: 0.25,
+        ease: "easeOut",
+      },
+    },
   };
 
-  // const buttonVariants = {
-  //   initial: { opacity: 0, y: 12 },
-  //   hover: { opacity: 1, y: 0, transition: { duration: 0.28 } },
-  // };
-
   return (
-    <main className="flex flex-col gap-4 md:gap-6 lg:gap-8 px-">
+    <main className="flex flex-col gap-4 md:gap-6 lg:gap-8 w-full">
       {showSection && (
         <div className="flex flex-nowrap overflow-x-auto md:flex-wrap md:overflow-visible no-scrollbar items-center bg-[#FFF] shadow-md rounded-lg md:rounded-xl border border-[#F0F0F0] gap-2 md:gap-9 p-2 md:py-5 md:px-16 mx-auto justify-center">
           {titles.map((title, index) => (
@@ -45,26 +47,27 @@ function ProjectCard({ showSection = false }) {
           ))}
         </div>
       )}
-      <section className="grid grid-cols-1 md:grid-cols-2 lt:grid-cols-3 lg:grid-cols-3 w-full justify-center self-stretch items-center gap-8 lg:gap-6 md:py-8 lg:py-5 py-2 lg:gap-y-10">
+      <section className="grid grid-cols-1 md:grid-cols-2 lt:grid-cols-3 xl:grid-cols-3 w-full gap-8 self-stretch lg:gap-6 py-2 lg:gap-y-10">
         <AnimatePresence initial={false}>
           {filteredProjects.map((item, index) => (
-            <motion.article
-              key={item.id || index}
+            <motion.a
+              key={item.id}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
               variants={cardVariants}
               initial="initial"
               animate="animate"
               exit="exit"
               whileHover="hover"
               layoutId={item.id}
-              className="flex group flex-1 xl:w-[26rem]  w-full flex-col justify-center border border-[#EBEBEB] rounded-lg items-center gap-1 pb-2 lg:pb-4 hover:shadow-[0_1px_2px_0_rgba(48,48,48,0.30),0_1px_3px_1px_rgba(48,48,48,0.15)] "
+              className="flex group flex-col border w-full border-[#EBEBEB] rounded-lg gap-1 pb-2 lg:pb-4 cursor-pointer"
             >
-              <picture className="flex self-stretch w-full">
-                <img
-                  src={item.image}
-                  alt=""
-                  className="rounded-t-lg flex self-stretch h-72 w-full"
-                />
-              </picture>
+              <img
+                src={item.image}
+                alt=""
+                className="rounded-t-lg flex flex-1 object-fill self-stretch w-full h-72 "
+              />
               <div className="flex flex-col md:flex-row items-start md:items-end md:justify-between self-stretch py-1 px-3 gap-2">
                 <div className="flex flex-1 flex-col items-start self-stretch gap-2 md:gap-1 lg:gap-2 py-2 md:py-0">
                   <span className="font-inter text-base lg:text-lg text-[#242424] leading-[1.125rem] md:leading-5 font-semibold self-stretch">
@@ -81,7 +84,7 @@ function ProjectCard({ showSection = false }) {
                   </i>
                 </Buttons1>
               </div>
-            </motion.article>
+            </motion.a>
           ))}
         </AnimatePresence>
       </section>

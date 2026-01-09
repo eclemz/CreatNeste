@@ -26,7 +26,7 @@ export const serviceCard = [
   },
 
   {
-    image: "/design.jpg",
+    image: "/design.png",
     icon: FaFigma,
     iconBg: "#DD1D37",
     title: "UI/UX Design",
@@ -219,12 +219,14 @@ export const projectCard = [
     image: "/project1.png",
     title: "Portfolio",
     name: "Chime Chinonyelum",
+    link: "https://www.chinonyechime.com",
   },
   {
     id: 2,
     image: "/project2.png",
     title: "Portfolio",
     name: "Ujunwa Linda",
+    link: "https://uju-s-portfolio.vercel.app",
   },
   {
     id: 3,
@@ -308,6 +310,7 @@ export const teamCard = [
 ];
 
 export const navLinks = [
+  { name: "Home", type: "route", to: "/" },
   { name: "About us", type: "route", to: "/about" },
   { name: "Services", type: "route", to: "/services" },
   { name: "Portfolio", type: "route", to: "/portfolio" },

@@ -15,7 +15,8 @@ function ScrollToTop() {
   // Track scroll position for both visibility and progress
   useEffect(() => {
     const updateScroll = () => {
-      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+      const { scrollTop, scrollHeight, clientHeight } =
+        document.documentElement;
       const totalScrollable = scrollHeight - clientHeight;
       const scrolled = (scrollTop / totalScrollable) * 100;
       setScrollProgress(scrolled);

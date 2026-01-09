@@ -19,7 +19,7 @@ function BlogPost() {
   }, []);
 
   return (
-    <section className="flex md:grid md:grid-cols-2 lg:grid-cols-3 flex-col items-start content-start  self-stretch md:gap-x-5 lg:gap-x-8 gap-y-12">
+    <section className="flex md:grid md:grid-cols-2 xl:grid-cols-3 flex-col items-start content-start  self-stretch md:gap-x-5 lg:gap-x-8 gap-y-12">
       {posts.map((post) => (
         <article
           key={post._id}

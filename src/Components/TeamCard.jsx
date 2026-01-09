@@ -3,7 +3,7 @@ import { teamCard } from "../Data/Data";
 
 function TeamCard() {
   return (
-    <main className="flex flex-col items-center self-stretch md:gap-5 gap-4 md:p-10 pt-10 pb-5 px-4">
+    <main className="flex flex-col items-center self-stretch md:gap-5 gap-4 xl:py-16 xl:px-14 md:p-10 pt-10 pb-5 px-4">
       <div className="flex flex-col items-center slef-stretch gap-2 px-20">
         <span className="font-inter text-sm font-semibold text-[#1D5ADD]">
           CEO DESK
@@ -16,7 +16,7 @@ function TeamCard() {
           and foster <br /> a culture that empowers you to do your best work.
         </p>
       </div>
-      <section className="grid grid-cols-1 md:grid-cols-3 lt:grid-cols-3 lg:grid-cols-4 justify-center items-start self-stretch md:gap-5 gap-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 lt:grid-cols-3 xl:grid-cols-3 justify-center items-start self-stretch md:gap-5 gap-8">
         {teamCard.map((item, index) => (
           <article
             key={index}
@@ -26,7 +26,7 @@ function TeamCard() {
               <img
                 src={item.image}
                 alt=""
-                className="w-full h-[23rem] md:h-[16rem] lg:h-[19rem] object-cover"
+                className="w-full h-[25rem] md:h-[23rem] lg:h-[32rem] xl:h-[25rem] object-cover"
               />
             </picture>
             <div className="flex flex-col items-start md:px-2 md:py-1 lg:px-4 lg:pb-2 self-stretch gap-[2px] md:gap-1">

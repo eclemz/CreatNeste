@@ -40,7 +40,7 @@ function Benefits({ showAll = false, showSection = false }) {
 
   return (
     <>
-      <main className="flex flex-col md:flex-row lg:py-0 lg:px-14 md:p-10 py-6 px-4 md:justify-between justify-center items-start md:items-center lg:gap-6 md:gap-5 gap-6 lg:self-stretch">
+      <main className="flex flex-col md:flex-row md:justify-between justify-center items-start md:items-center xl:py-16 xl:px-14 md:p-10 py-6 px-4 lg:self-stretch">
         <AnimatePresence>
           <div className="flex flex-col md:flex-1 md:gap-6">
             {showSection && (
@@ -59,7 +59,7 @@ function Benefits({ showAll = false, showSection = false }) {
                 <motion.section
                   variants={containerVariants}
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
-              items-start gap-2 md:gap-5 lg:gap-6 self-stretch"
+              items-start gap-4 md:gap-5 lg:gap-6 self-stretch"
                 >
                   {(showAll ? benefits : benefits.slice(0, 3)).map(
                     (item, index) => {
@@ -113,59 +113,59 @@ function Benefits({ showAll = false, showSection = false }) {
             )}
           </div>
         </AnimatePresence>
-      </main>
 
-      {/* Section For Home page */}
-      {!showSection && (
-        <section className="flex flex-col md:flex-row items-center self-stretch lg:gap-0 lt:gap-5 gap-5 py-2 px-4 md:p-10 lg:py-16 lg:px-14">
-          <div className="flex flex-1 flex-col justify-center items-start gap-4 py-3 lg:py-6">
-            <div className="flex flex-col items-start self-stretch gap-2 lg:gap-1">
-              <div className="flex flex-col items-start justify-center self-stretch gap-1 md:gap-3">
-                <div className="flex flex-col justify-center items-center lg:items-start self-stretch gap-2 lg:gap-3 ">
-                  <span className="font-inter text-xs lg:text-sm font-bold text-[#1D5ADD] self-stretch">
-                    BENEFITS
-                  </span>
-                </div>
-                <h3 className="font-inter text-[2rem] text-[#242424] font-semibold self-stretch leading-9">
-                  A digital agency with added
-                  <br className="lt:hidden hidden lg:block" /> value.
-                </h3>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-start self-stretch md:gap-2 gap-8">
-              {(showAll ? benefits : benefits.slice(0, 3)).map(
-                (item, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col items-start self-stretch rounded-lg md:py-3 gap-2 "
-                  >
-                    <h3 className="font-inter text-base md:text-lg lg:text-xl font-semibold text-[#313131]">
-                      {item.title}
-                    </h3>
-                    <p className="font-inter text-sm lg:text-base md:self-stretch text-[#565656] ">
-                      {item.desc}
-                    </p>
+        {/* Section For Home page */}
+        {!showSection && (
+          <section className="flex flex-col md:flex-row items-center self-stretch lg:gap-8 lt:gap-5 gap-5">
+            <div className="flex flex-1 flex-col justify-center items-start gap-4 py-3 lg:py-6">
+              <div className="flex flex-col items-start self-stretch gap-2 lg:gap-1">
+                <div className="flex flex-col items-start justify-center self-stretch gap-1 md:gap-3">
+                  <div className="flex flex-col justify-center items-center lg:items-start self-stretch gap-2 lg:gap-3 ">
+                    <span className="font-inter text-xs lg:text-sm font-bold text-[#1D5ADD] self-stretch">
+                      BENEFITS
+                    </span>
                   </div>
-                )
-              )}
+                  <h3 className="font-inter text-[2rem] text-[#242424] font-semibold self-stretch leading-9">
+                    A digital agency with added
+                    <br className="lt:hidden hidden lg:block" /> value.
+                  </h3>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-start self-stretch md:gap-2 gap-8">
+                {(showAll ? benefits : benefits.slice(0, 3)).map(
+                  (item, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-start self-stretch rounded-lg md:py-3 gap-2 "
+                    >
+                      <h3 className="font-inter text-base md:text-lg lg:text-xl font-semibold text-[#313131]">
+                        {item.title}
+                      </h3>
+                      <p className="font-inter text-sm lg:text-base md:self-stretch text-[#565656] ">
+                        {item.desc}
+                      </p>
+                    </div>
+                  )
+                )}
+              </div>
+              <Buttons1
+                onClick={() => navigate("/services")}
+                className="flex bg-white h-10 hover:shadow-lg border border-[#1D5ADD] md:px-4 py-2 lg:py-3 px-3  md:self-start self-stretch gap-2 text-[#1D5ADD]"
+              >
+                Learn More
+              </Buttons1>
             </div>
-            <Buttons1
-              onClick={() => navigate("/services")}
-              className="flex bg-white shadow-md h-10 hover:shadow-lg border border-[#1D5ADD] md:px-4 py-2 lg:py-3 px-3  md:self-start self-stretch gap-2 text-[#1D5ADD]"
-            >
-              Learn More
-            </Buttons1>
-          </div>
-          <picture className="flex flex- md:h-[29.8rem] lg:h-[34.75rem] lg:w-[50%] items-center">
-            <img
-              src="/Subtract1.svg"
-              alt=""
-              className="flex self-center justify-center lg:h-[34.75rem] lg:w-[45rem] md:h-[29.8rem] md:w-[23rem] h-[22rem] w-[24rem]"
-            />
-          </picture>
-        </section>
-      )}
+            <picture className="flex flex- md:h-[29.8rem] lg:h-[34.75rem] lg:w-[50%] items-center">
+              <img
+                src="/Subtract1.svg"
+                alt=""
+                className="flex self-center justify-center lg:h-[34.75rem] lg:w-[45rem] md:h-[29.8rem] md:w-[23rem] h-[22rem] w-[24rem]"
+              />
+            </picture>
+          </section>
+        )}
+      </main>
     </>
   );
 }

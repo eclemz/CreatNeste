@@ -196,7 +196,7 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
 
       {/* Category Filters - Only show when showSearchSection is true */}
       {showSearchSection && (
-        <section className="w-full flex flex-col items-center py-6 px-4 md:py-10 md:px-[7.5rem] lt:py-10 lt:px-[7.5rem] lg:py-10 lg:px-60 gap-4 md:gap-6 lg:gap-8">
+        <section className="w-full flex flex-col items-center py-6 px-4 md:py-10 md:px-[7.5rem] lg:py-10 lg:px-60 gap-4 md:gap-6 lg:gap-8">
           {renderCategoryFilters()}
           {renderFaqList(displayFaqs)}
         </section>
@@ -217,7 +217,7 @@ function Faq({ showSection = false, showSearchSection = false, faqs = [] }) {
             <p className="font-inter text-sm md:text-base lg:text-lg text-center text-[#475467] ">
               Here is everything you need to know about our services.
             </p>
-            <div className="w-full lg:border rounded-3xl pt-11 pb-7 lg:px-5 bg-[#FFF] border-[#4376E3]">
+            <div className="w-full xl:border rounded-3xl lg:pt-11 lg:pb-7 lg:px-5 bg-[#FFF] border-[#4376E3]">
               {renderFaqList(displayFaqs)}
             </div>
           </div>
