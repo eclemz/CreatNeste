@@ -17,12 +17,14 @@ import FaqPage from "./Pages/FaqPage";
 import useGtag from "./hooks/useGtag";
 import Blog from "./Pages/Blog";
 import FloatingWhatsApp from "./Components/FLoatingWhatsapp";
+import SpeedInsights from "./Components/SpeedInsights";
 
 function App() {
   const location = useLocation();
   useGtag();
   return (
     <>
+      <SpeedInsights />
       <SeasonalMarquee />
       <Navbar />
       <AnimatePresence mode="wait">
